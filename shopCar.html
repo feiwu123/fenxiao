@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/xiaomi/shopCar.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line black"></a>
+					<a class="mui-guanli mui-btn mui-btn-link mui-pull-right">管理</a>
+					<a class="mui-quitguanli mui-btn mui-btn-link mui-pull-right red hide">退出管理</a>
+					<h1 class="mui-title">
+						购物车
+					</h1>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<!-- 内容 -->
+						<div class="shopCarList hide">
+							<div class="shopCarItem">
+								<div class="checkbox">
+									<input type="checkbox" class="myCheckbox" id="amountRadio1"/>
+									<label for="amountRadio1" class="checkBoxCircle"></label>
+								</div>
+								<div class="proImg">
+									<img src="images/login-1.png" />
+								</div>
+								<div class="proInfo">
+									<div class="proTitle">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="props">
+										<div class="propItem">
+											<span>128GB;Black</span>
+											<span class="iconfont icon-arrow-drop-down-fill trans45"></span>
+										</div>
+									</div>
+									<div class="priceNum">
+										<div class="marketPrice">$4999.00MXN</div>
+										<div class="mui-numbox transRight" data-numbox-min="1" data-numbox-step="1">
+										  <!-- "-"按钮，点击可减小当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										  <input class="mui-numbox-input" type="number" />
+										  <!-- "+"按钮，点击可增大当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										</div>
+										<div class="shopCarItemDelete deleteIcon transRight">
+											<span class="iconfont icon-delete-bin-line"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="shopCarItem">
+								<div class="checkbox">
+									<input type="checkbox" class="myCheckbox" id="amountRadio2"/>
+									<label for="amountRadio2" class="checkBoxCircle"></label>
+								</div>
+								<div class="proImg">
+									<img src="images/login-1.png" />
+								</div>
+								<div class="proInfo">
+									<div class="proTitle">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="props">
+										<div class="propItem">
+											<span>128GB;Black</span>
+											<span class="iconfont icon-arrow-drop-down-fill trans45"></span>
+										</div>
+									</div>
+									<div class="priceNum">
+										<div class="marketPrice">$4999.00MXN</div>
+										<div class="mui-numbox" data-numbox-min="1" data-numbox-step="1">
+										  <!-- "-"按钮，点击可减小当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										  <input class="mui-numbox-input" type="number" />
+										  <!-- "+"按钮，点击可增大当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="shopCarItem">
+								<div class="checkbox">
+									<input type="checkbox" class="myCheckbox" id="amountRadio3"/>
+									<label for="amountRadio3" class="checkBoxCircle"></label>
+								</div>
+								<div class="proImg">
+									<img src="images/login-1.png" />
+								</div>
+								<div class="proInfo">
+									<div class="proTitle">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="props">
+										<div class="propItem">
+											<span>128GB;Black</span>
+											<span class="iconfont icon-arrow-drop-down-fill trans45"></span>
+										</div>
+									</div>
+									<div class="priceNum">
+										<div class="marketPrice">$4999.00MXN</div>
+										<div class="mui-numbox" data-numbox-min="1" data-numbox-step="1">
+										  <!-- "-"按钮，点击可减小当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										  <input class="mui-numbox-input" type="number" />
+										  <!-- "+"按钮，点击可增大当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="shopCarItem">
+								<div class="checkbox">
+									<input type="checkbox" class="myCheckbox" id="amountRadio3"/>
+									<label for="amountRadio3" class="checkBoxCircle"></label>
+								</div>
+								<div class="proImg">
+									<img src="images/login-1.png" />
+								</div>
+								<div class="proInfo">
+									<div class="proTitle">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="props">
+										<div class="propItem">
+											<span>128GB;Black</span>
+											<span class="iconfont icon-arrow-drop-down-fill trans45"></span>
+										</div>
+									</div>
+									<div class="priceNum">
+										<div class="marketPrice">$4999.00MXN</div>
+										<div class="mui-numbox" data-numbox-min="1" data-numbox-step="1">
+										  <!-- "-"按钮，点击可减小当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										  <input class="mui-numbox-input" type="number" />
+										  <!-- "+"按钮，点击可增大当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="shopCarItem">
+								<div class="checkbox">
+									<input type="checkbox" class="myCheckbox" id="amountRadio3"/>
+									<label for="amountRadio3" class="checkBoxCircle"></label>
+								</div>
+								<div class="proImg">
+									<img src="images/login-1.png" />
+								</div>
+								<div class="proInfo">
+									<div class="proTitle">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="props">
+										<div class="propItem">
+											<span>128GB;Black</span>
+											<span class="iconfont icon-arrow-drop-down-fill trans45"></span>
+										</div>
+									</div>
+									<div class="priceNum">
+										<div class="marketPrice">$4999.00MXN</div>
+										<div class="mui-numbox" data-numbox-min="1" data-numbox-step="1">
+										  <!-- "-"按钮，点击可减小当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										  <input class="mui-numbox-input" type="number" />
+										  <!-- "+"按钮，点击可增大当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="shopCarItem">
+								<div class="checkbox">
+									<input type="checkbox" class="myCheckbox" id="amountRadio3"/>
+									<label for="amountRadio3" class="checkBoxCircle"></label>
+								</div>
+								<div class="proImg">
+									<img src="images/login-1.png" />
+								</div>
+								<div class="proInfo">
+									<div class="proTitle">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="props">
+										<div class="propItem">
+											<span>128GB;Black</span>
+											<span class="iconfont icon-arrow-drop-down-fill trans45"></span>
+										</div>
+									</div>
+									<div class="priceNum">
+										<div class="marketPrice">$4999.00MXN</div>
+										<div class="mui-numbox" data-numbox-min="1" data-numbox-step="1">
+										  <!-- "-"按钮，点击可减小当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										  <input class="mui-numbox-input" type="number" />
+										  <!-- "+"按钮，点击可增大当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="emptyCar">
+							<div class="emptyList">
+								<img src="images/emptyCar.png" />
+							</div>
+							<div class="emptyCarTxt">
+								购物车是空的
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				
+				<div class="amount">
+					<div class="amountCont">
+						<div class="checkbox">
+							<input type="checkbox" class="myCheckbox" id="amountRadio"/>
+							<label for="amountRadio" class="checkBoxCircle"></label>
+						</div>
+						<div class="hasChosen">
+							已选(<span class="choseAmount">0</span>)
+						</div>
+						<div class="amountPrice">
+							$1990.00MXN
+						</div>
+					</div>
+					<div class="comfirmBtn">
+						确定
+					</div>
+				</div>
+				<div class="amount amountDelete hide">
+					<div class="amountCont">
+						<div class="checkbox">
+							<input type="checkbox" class="myCheckbox" id="amountRadio"/>
+							<label for="amountRadio" class="checkBoxCircle"></label>
+							<span style="display:inline-block;font-size:14px;color: #999999;margin-left: 8px;">全选</span>
+						</div>
+					</div>
+					<div class="comfirmBtn deleteAll">
+						删除
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		
+		<!--下拉弹窗选择属性 -->
+	<div class="popBox visible" id="guige">
+		<div class="boxshadow">
+		</div>
+		<div class="popContent">
+			<div class="productGuige">
+				<div class="mui-scroll-wrapper popscrollContent">
+					<div class="mui-scroll">
+						<div class="proInformation">
+							<div class="productImg">
+								<img src="images/login-1.png"/>
+							</div>
+							<div class="productPrice">
+								<div class="price">
+									$999.00
+								</div>
+								<div class="chooseAttrs">
+									请选择规格数量
+								</div>
+							</div>
+						</div>
+						<div class="texAttr proAttr">
+							<div class="title">文字属性</div>
+							<div class="attrCon">
+								<ul>
+									<li class="active">属性一</li>
+									<li>属性一</li>
+									<li>属性一</li>
+									<li>属性一</li>
+									<li>属性一</li>
+									<li>属性一</li>
+									<li>属性一</li>
+									<li>属性一</li>
+								</ul>
+							</div>
+						</div>
+						<hr>
+						
+						<div class="imgAttr proAttr">
+							<div class="title">图文属性</div>
+							<div class="attrCon">
+								<ul>
+									<li class="active">
+										<div class="attrImg">
+											<img class="attrImgSmall" src="images/logo.png"/>
+										</div>
+										<div class="attrName">
+											<span>属性标题属性标题属性标题</span>
+										</div>
+									</li>
+									<li>
+										<div class="attrImg">
+											<img class="attrImgSmall" src="images/logo.png"/>
+										</div>
+										<div class="attrName">
+											<span>属性标题属性标题属性标题</span>
+										</div>
+									</li>
+									<li>
+										<div class="attrImg">
+											<img class="attrImgSmall" src="images/logo.png"/>
+										</div>
+										<div class="attrName">
+											<span>属性标题属性标题属性标题</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<hr>
+						
+						<div class="numberBox proAttr">
+							<div class="title">Número</div>
+							<div class="mui-numbox">
+							  <!-- "-"按钮，点击可减小当前数值 -->
+							  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+							  <input class="mui-numbox-input" type="number" />
+							  <!-- "+"按钮，点击可增大当前数值 -->
+							  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closeIcon">
+				<span class="iconfont icon-close-line"></span>
+			</div>
+			<div class="clickBtn">
+				Agregar al carrito
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+	 
+	 mui(".props").on("tap",".propItem",function(e){
+	 	   document.getElementsByTagName('html')[0].className = "overflow";
+	 	   document.getElementById('guige').className="popBox";
+		   
+	 	   mui('.popscrollContent').scroll().scrollTo(0,0,100);
+	 })
+	 
+	 //规格选择
+	 mui('#guige').on("tap","ul li",function(e){
+	 	   var siblingsEle = getSiblings(this);
+	 	   siblingsEle.forEach((item,index)=>{
+	 		   item.className = "";
+	 	   })
+	 	   this.className = "active";
+	 })
+	 function getSiblings(element) {
+	     var siblings = []; // 存放同级元素的数组
+	     if (element.parentNode && element.parentNode.children) {
+	         for (var i = 0; i < element.parentNode.children.length; i++) {
+	             var child = element.parentNode.children[i];
+	             if (child !== element && child.nodeType === 1) {
+	                 siblings.push(child);
+	             }
+	         }
+	     }
+	     return siblings;
+	 }
+	 
+	 
+	 //关闭规格弹窗
+	 document.querySelector('.closeIcon').onclick = function(){
+	 	   document.getElementsByTagName('html')[0].className = "";
+	 	   document.getElementById('guige').className = "popBox visible";
+	 }
+	 
+	 //全选
+	 $("#amountRadio").on("click",function(e){
+		 console.log(this.checked);
+		 if(this.checked){
+			 $(".shopCarItem .myCheckbox").prop('checked',true);
+			  let checkedNum = $(".shopCarItem .myCheckbox:checked").length;
+			 $(".choseAmount").html(checkedNum);
+		 }else{
+			 $(".shopCarItem .myCheckbox").prop('checked',false);
+			 $(".choseAmount").html(0);
+		 }
+	 })
+	 //单选
+	 $(".shopCarItem .myCheckbox").on("click",function(e){
+		 let checkboxNum = $(".shopCarItem .myCheckbox").length;
+		 let checkedNum = $(".shopCarItem .myCheckbox:checked").length;
+		 if(checkboxNum == checkedNum){
+			 $("#amountRadio").prop('checked',true);
+		 }else{
+			 $("#amountRadio").prop('checked',false);
+		 }
+		 $(".choseAmount").html(checkedNum);
+	 })
+	 
+	 //点击管理
+	 $(".mui-guanli").on("tap",function(){
+		 $(this).addClass("hide");
+		 $(".mui-quitguanli").removeClass("hide");
+		 $(".mui-numbox").addClass("transRight");
+		 $(".shopCarItemDelete").removeClass("transRight");
+		 $(".amountDelete").removeClass('hide');
+	 })
+	 $(".mui-quitguanli").on("tap",function(){
+	 		 $(this).addClass("hide");
+	 		 $(".mui-guanli").removeClass("hide");
+	 		 $(".mui-numbox").removeClass("transRight");
+			 $(".shopCarItemDelete").addClass("transRight");
+			 $(".amountDelete").addClass('hide');
+	 })
+</script>

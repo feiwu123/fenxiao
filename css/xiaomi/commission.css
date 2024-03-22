@@ -1,0 +1,187 @@
+.mui-off-canvas-wrap .mui-inner-wrap{
+	background-color: #F8F9F9;
+}
+.mui-bar-nav~.mui-content{
+	padding-top: 58px;
+	background: transparent;
+}
+.mui-inner-wrap-bg{
+	height: 212px;
+	background: linear-gradient(180deg, #FCE6E5 0%, #F7F2F4 100%);
+	border-radius: 0px 0px 0px 0px;
+	width: 100%;
+}
+.mui-bar{
+	background: transparent;
+	transition: all 0.5s;
+}
+.mui-bar.whitebg{
+	background-color: #fff;
+}
+.mui-content{
+	background: transparent;
+}
+.cardInfo{
+	background-image: url('../../images/cards/card.png');
+	background-size: cover;
+	height: 196px;
+	width: 100%;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	padding: 20px 23px;
+	border-radius: 20px;
+}
+#offCanvasContentScroll{
+	padding-top: 58px;
+	padding-bottom: 50px;
+}
+#offCanvasContentScroll .mui-scroll{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.cardInfo .title{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+.cardInfo .income .incomeTotal{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 9px;
+}
+.cardInfo .income .incomeTotal .incomeNumber{
+	font-size: 37px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+#withdrawalBtn{
+	width: 78px;
+	height: 35px;
+	background: #FFFFFF;
+	border-radius: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #D44936;
+}
+.cardInfo .balance{
+	display: flex;
+	margin-top: 26px;
+}
+.cardInfo .balance .balanceItem{
+	width: 50%;
+}
+.cardInfo .balance .value{
+	font-size: 24px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 22px;
+	margin-top: 8px;
+}
+.commissionTabs{
+	display: flex;
+	margin-top: 16px;
+}
+.commissionTabs .tabItem{
+	font-size: 14px;
+	font-family: Camphor Pro;
+	font-weight: 300;
+	color: #666666;
+	line-height: 22px;
+	margin-right: 16px;
+}
+.commissionTabs .tabItem.active{
+	color: #000000;
+	font-weight: 600;
+	font-size: 16px;
+	font-family: Camphor Pro Bold;
+}
+
+.commissionList .list .listItem{
+	background-color: #fff;
+	padding: 18px 20px;
+	margin-top: 10px;
+	border-radius: 12px;
+}
+.commissionList .list .listItem .userInfo{
+	display: flex;
+	justify-content: space-between;
+}
+.commissionList .list .listItem .userInfo .avatarImg{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-right: 8px;
+}
+.listTopCon{
+	border-bottom: 1px solid #E8E8E8;
+}
+.commissionList .list .listItem .topCon{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.commissionList .list .listItem .userInfo .avatarImg img{
+	width: 100%;
+}
+.commissionList .list .listItem .userInfo .userName{
+	font-size: 16px;
+	color: #000;
+}
+.commissionList .list .listItem .userInfo .dateTime{
+	color: #999999;
+	font-size: 12px;
+}
+.commissionList .list .listItem .userInfo .itemStats{
+	font-size: 12px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+}
+.commissionList .list .listItem .itemStats.teamIncome{
+	color: #6878CD;
+	font-size: 12px;
+}
+.commissionList .list .listItem .itemStats.personIncome{
+	color: #E59E60;
+}
+.commissionList .list .listItem .itemStats.withdrawalIncome{
+	color: #5A92A3;
+}
+.buyProducts .tips{
+	font-size: 15px;
+	font-family: PingFang SC, PingFang SC;
+	font-weight: 400;
+	color: #434343;
+}
+.buyProducts .productList .productItem{
+	width: 34px;
+	height: 34px;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+}
+.buyProducts .productList .productItem:last-child::after{
+	content: "…";
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0px;
+	color: #fff;
+	text-align: center;
+	font-size: 28px;
+}
+.buyProducts .productList .productItem img{
+	width: 100%;
+}
+.listBottomCon .incomePrice{
+	font-size: 16px;
+	color: #E6403A;
+	text-align: right;
+	padding-top: 12px;
+}
+

@@ -1,0 +1,89 @@
+.mui-bar-nav~.mui-content{
+	padding-top: 58px;
+}
+.mui-content{
+	background-color: #fff;
+}
+.userInformation{
+	padding: 0 16px;
+}
+.userInformation .avator{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 30px;
+}
+.userInformation .avator img{
+	width: 100%;
+	border-radius: inherit;
+}
+.userInformation .avator .cameraIcon{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	background-color: #EA5B2C;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	text-align: center;
+	line-height: 24px;
+}
+#clip {
+	width: 100%;
+	height: 400px;
+}
+.elementItem{
+	margin-top: 24px;
+}
+.elementItem label{
+	font-size: 16px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #000000;
+	text-transform: uppercase;
+}
+.elementItem .elementInput{
+	width: 100%;
+	background-color: #F7F7F7;
+	border-radius: 6px 6px 6px 6px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.elementItem .elementInput input{
+	outline: none;
+	border: 0;
+	height: inherit;
+	background-color: transparent;
+	width: inherit;
+	padding: 0 16px;
+	color: #999999;
+}
+.elementItem .elementInput .iconfont{
+	font-size: 25px;
+	margin-right: 16px;
+}
+.navigateToEmail{
+	font-size: 16px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #E6403A;
+	display: inline-block;
+	padding: 0 16px;
+	text-transform: uppercase;
+}
+.comfirmDiv{
+	margin-top: 50px;
+}
+#comfirmBtn{
+	text-align: center;
+	height: 54px;
+	background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+	border-radius: 10px 10px 10px 10px;
+	line-height: 54px;
+	color: #fff;
+}

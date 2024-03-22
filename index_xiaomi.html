@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+			<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+				<!--侧滑菜单部分-->
+				<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+					<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+								<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+								<div class="userInfo">
+									<div class="avator">
+										<div class="avatorImg">
+											<img src=""/>
+										</div>
+										<div class="userName">123</div>
+									</div>
+									<div class="userMenuList">
+										<ul>
+											<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+											<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+											<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+											<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="logout">
+							<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+						</div>
+					</div>
+				</aside>
+				<!--主界面部分-->
+				<div class="mui-inner-wrap">
+					<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<div class="top-content">
+						<div class="header">
+							<div class="header_con">
+								<div class="icons menu_icon" id="offCanvasShow">
+									<span class="iconfont icon-menu-line"></span>
+								</div>
+								<div class="search-content">
+									<input class="search-input" type="text" required id="searchInput"/>
+									<label class="mui-placeholder" for="searchInput">
+										<span class="iconfont icon-search-line"></span>
+										<span class="iconText">búsqueda</span>
+									</label>
+								</div>
+								<div class="icons shopping-car">
+									<span class="iconfont icon-shopping-cart-line"></span>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div class="body-content">
+						<div class="row shareContent">
+							<div class="sharePage">
+								<img id="shareBgImg" src="images/index/share.png" />
+								<div class="qrcode">
+									
+								</div>
+								<div class="shareLink">
+									<div class="shareUrls">
+										https://mistoremx.com/?u=16232
+									</div>
+									<div class="copyLink">
+										copiar
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row lunboContent">
+							<div id="slider" class="mui-slider" >
+								<div class="mui-slider-group mui-slider-loop">
+									<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="../images/yuantiao.jpg">
+										</a>
+									</div>
+									<!-- 第一张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./images/shuijiao.jpg">
+										</a>
+									</div>
+									<!-- 第二张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./images/muwu.jpg">
+										</a>
+									</div>
+									<!-- 第三张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./images/cbd.jpg">
+										</a>
+									</div>
+									<!-- 第四张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./images/yuantiao.jpg">
+										</a>
+									</div>
+									<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="./images/shuijiao.jpg">
+										</a>
+									</div>
+								</div>
+								<div class="mui-slider-indicator">
+									<div class="mui-indicator mui-active"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="categoryList firstCateCategory">
+							<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+								<div class="mui-scroll">
+									<a class="mui-control-item mui-active">
+										total
+									</a>
+									<a class="mui-control-item">
+										Celulares
+									</a>
+									<a class="mui-control-item">
+										Hogar
+									</a>
+									<a class="mui-control-item">
+										Smart devices
+									</a>
+									<a class="mui-control-item">
+										Audio
+									</a>
+									<a class="mui-control-item">
+										T
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="categoryList secondCategory">
+							<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+								<div class="mui-scroll">
+									<a class="mui-control-item mui-active">
+										Scooter
+									</a>
+									<a class="mui-control-item">
+										TV
+									</a>
+									<a class="mui-control-item">
+										Iluminación
+									</a>
+									<a class="mui-control-item">
+										Casa Inteligente
+									</a>
+									<a class="mui-control-item">
+										Casa Inteligente
+									</a>
+									<a class="mui-control-item">
+										Casa Inteligente
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- 下拉推荐产品 -->
+						<div class="row" id="productListContent">
+							<div class="productList">
+								<div class="productItem">
+									<div class="productImg">
+										<img src="./images/login-1.png"/>
+									</div>
+									<div class="productName">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="shareTips">
+										分享该商品可获得10%提成
+									</div>
+									<div class="productPrice">
+										$2899.00MXN
+									</div>
+								</div>
+								<div class="productItem">
+									<div class="productImg">
+										<img src="./images/login-1.png"/>
+									</div>
+									<div class="productName">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="shareTips">
+										分享该商品可获得10%提成
+									</div>
+									<div class="productPrice">
+										$2899.00MXN
+									</div>
+								</div>
+								<div class="productItem">
+									<div class="productImg">
+										<img src="./images/login-1.png"/>
+									</div>
+									<div class="productName">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="shareTips">
+										分享该商品可获得10%提成
+									</div>
+									<div class="productPrice">
+										$2899.00MXN
+									</div>
+								</div>
+								<div class="productItem">
+									<div class="productImg">
+										<img src="./images/login-1.png"/>
+									</div>
+									<div class="productName">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="shareTips">
+										分享该商品可获得10%提成
+									</div>
+									<div class="productPrice">
+										$2899.00MXN
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						</div>
+						</div>
+						
+					</div>
+					<!-- off-canvas backdrop -->
+					<div class="mui-off-canvas-backdrop"></div>
+				</div>
+			</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script type="text/javascript" charset="UTF-8">
+   mui.init({
+	   pullRefresh : {
+	       container:'#offCanvasContentScroll',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+	       up : {
+	         height:50,//可选.默认50.触发上拉加载拖动距离
+	         auto:true,//可选,默认false.自动上拉加载一次
+	         contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+	         contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+	         callback:getAjax //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+	       }
+	     }
+   });
+   mui.plusReady(function(){
+    
+   });
+   mui.ready(function(){
+    
+    });
+   
+   function getAjax(){
+	   this.endPullupToRefresh(true);
+	   mui.ajax('http://server-name/login.php',{
+	   	data:{
+	   		username:'username',
+	   		password:'password'
+	   	},
+	   	dataType:'json',//服务器返回json格式数据
+	   	type:'post',//HTTP请求类型
+	   	timeout:10000,//超时时间设置为10秒；
+	   	headers:{'Content-Type':'application/json'},	              
+	   	success:function(data){
+	   		//服务器返回响应，根据响应结果，分析是否登录成功；
+			//this.endPullupToRefresh(true|false);必须要结束数据
+	   	},
+	   	error:function(xhr,type,errorThrown){
+	   		//异常处理；
+	   		console.log(type);
+	   	}
+	   });
+   }
+   
+   //绑定分类点击事件
+   mui('.firstCateCategory .mui-scroll').on('tap', '.mui-control-item', function(e){
+     console.log(this);
+	 //通过一级分类获取二级分类
+	 mui('#offCanvasContentScroll').pullRefresh({
+		 up : {
+		   height:50,//可选.默认50.触发上拉加载拖动距离
+		   auto:false,//可选,默认false.自动上拉加载一次
+		   contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+		   contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+		   callback:getAjax //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+		 }
+	 }).refresh(true);
+   });
+   
+   mui('.secondCategory .mui-scroll').on('tap', '.mui-control-item', function(e){
+     console.log(this);
+	 mui('#offCanvasContentScroll').pullRefresh({
+		 up : {
+		   height:50,//可选.默认50.触发上拉加载拖动距离
+		   auto:false,//可选,默认false.自动上拉加载一次
+		   contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+		   contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+		   callback:getAjax //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+		 }
+	 }).refresh(true);
+	 //通过二级分类获取底部商品
+   });
+   
+   
+  </script>
+  

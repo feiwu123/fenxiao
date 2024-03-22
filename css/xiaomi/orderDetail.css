@@ -1,0 +1,90 @@
+.mui-bar{
+	background: url(../../images/head/orderHeader.png);
+}
+.mui-bar-nav~.mui-content{
+	padding-bottom: 76px;
+}
+.orderState{
+	background: url(../../images/head/orderState.png);
+	height: 146px;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	top: -58px;
+	width: 100%;
+	z-index: -1;
+}
+.orderStateMsg{
+	height: 88px;
+}
+.orderStateMsg .title{
+	font-size: 20px;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+.orderStateMsg .msg{
+	font-size: 14px;
+	font-weight: 400;
+	color: #FFFFFF;
+	margin-top: 8px;
+}
+.selectShop .selectTitle .title{
+	display: flex;
+	align-items: center;
+}
+.useraddress .name{
+	display: flex;
+	gap: 16px;
+	font-size: 16px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #000000;
+}
+.useraddress .addressDes{
+	font-size: 13px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #666666;
+}
+.selectShop{
+	border-radius: 5px;
+}
+.bottomCom{
+	background-color: #fff;
+	position: fixed;
+	bottom: 0px;
+	z-index: 99;
+	min-height: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	gap: 16px;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 0 16px;
+}
+.bottomCom .bottomBtn{
+	border-radius: 20px 20px 20px 20px;
+	opacity: 1;
+	border: 1px solid #E8E8E8;
+	font-size: 14px;
+	font-weight: 400;
+	color: #333333;
+	height: 37px;
+	line-height: 37px;
+	padding: 0 16px;
+}
+
+.orderDetail{
+	padding: 16px;
+	background-color: #fff;
+	margin-top: 8px;
+}
+.orderDetail .orderDetailItem{
+	display: flex;
+	justify-content: space-between;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	color: #666666;
+}

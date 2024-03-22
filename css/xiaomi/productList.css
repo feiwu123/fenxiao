@@ -1,0 +1,98 @@
+/*
+ * @wufei 20240108
+ * 主要的CSS
+ * 
+ * */
+.filterKeywords{
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	border-radius: 20px 20px 0px 0px;
+	font-size: 16px;
+	font-family: Camphor Pro;
+	font-weight: 500;
+	color: #000000;
+	height: 50px;
+	line-height: 50px;
+}
+.filterKeywords .title{
+	font-family: Camphor Pro Bold;
+}
+.filterKeywords .fiterWords{
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+}
+.filterKeywords .iconfont{
+	font-size: 30px;
+}
+#productListContent .productList{
+	background-color: #fff;
+	margin-top: 0px;
+}
+.productList .productItem{
+	margin-top: 16px;
+}
+.productItem .cutoff{
+	font-size: 12px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #999999;
+}
+.productItem .coins{
+	display: flex;
+	align-items: center;
+}
+.productItem .coins .ganar{
+	font-size: 12px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #999999;
+}
+.body-content{
+	position: relative;
+}
+.popBoxshadow{
+	background-color: #000;
+	opacity: 0.3;
+	height: 100%;
+}
+#popover{
+	position: absolute;
+	width: 100%;
+	top: 0px;
+}
+.dropDownList{
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    transition: all 1s;
+}
+.dropDownList .mui-table-view-cell{
+	padding: 0px;
+	transition: all 0.1s;
+}
+.dropDownList.open{
+	height: 100%;
+}
+.dropDownList.open .mui-table-view-cell{
+	padding: 11px 15px;
+}
+.mui-table-view-cell:after{
+	background-color: #fff;
+}
+.mui-table-view-cell.default a{
+	color: #666666;
+	display: flex;
+	justify-content: space-between;
+}
+.mui-table-view-cell.default a .iconfont{
+	display: none;
+}
+.mui-table-view-cell.active a{
+	color: #000;
+	font-family:Camphor Pro Bold; 
+}
+.mui-table-view-cell.active a .iconfont{
+	display: block;
+}

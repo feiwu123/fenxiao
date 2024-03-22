@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<link rel="stylesheet" href="css/xiaomi/drawalCon.css" />
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line black"></a>
+					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right gotoIndex">返回首页</a>
+					<h1 class="mui-title">提现</h1>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<!-- 内容 -->
+						<div class="drawalCon">
+							<div class="drawalTitle">
+								提现金额
+							</div>
+							<div class="drawalInput">
+								<span class="currency">$</span>
+								<input type="number" id="withdrawalNumber" />
+							</div>
+							<div class="balance">
+								当前佣金余额<span class="value">$66666.00</span>MXN
+							</div>
+							<div class="cards">
+								<div class="cardsTitle">收款卡</div>
+								<div class="cardInfo">
+									<span class="cardName noCard">中国银行</span>
+									<span class="iconfont icon-arrow-drop-down-fill rotate90"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 底部 -->
+				<footer class="bottomCon">
+					<div class="drawalBtn">
+						提现
+					</div>
+				</footer>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		
+		<!-- 门店选择弹窗 -->
+		<div class="popBox" id="cardList">
+			<div class="boxshadow">
+			</div>
+			<div class="popContent">
+				<div class="shopContent">
+					<div class="topHead">
+						<span class="title">选择到账银行卡</span>
+					</div>
+					<div class="mui-scroll-wrapper popBoxContent">
+						<div class="mui-scroll">
+							<!-- 弹窗内容 -->
+							<div class="cardList">
+								<div class="listItem active"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
+								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
+								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
+								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
+								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
+								<div class="addNewCard listItem">
+									<div class="title">
+										<span class="iconfont icon-bank-card-line"></span><span>使用新银行卡提现</span>
+									</div>
+									<div>
+										<span class="iconfont icon-arrow-drop-down-fill rotate90"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="closeIcon">
+					<span class="iconfont icon-close-line"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+	 $(".gotoIndex").on("tap",function(){
+		 mui.openWindow({
+		 	url:'index_xiaomi.html'
+		 });
+	 })
+	 
+	 //弹窗
+	 mui('.popBoxContent').scroll({
+	 	deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+	 });
+	 
+	 //关闭规格弹窗
+	document.querySelector('.popBox .closeIcon').onclick = function(){
+		   document.getElementsByTagName('html')[0].className = "";
+		   document.getElementById('cardList').className = "popBox visible";
+	}
+	$('.popBoxContent .listItem').not(".addNewCard").on("tap",function(){
+			 $(".popBoxContent .listItem").removeClass("active");
+			 $(this).addClass("active");
+			 document.getElementsByTagName('html')[0].className = "";
+			 document.getElementById('cardList').className = "popBox visible";
+			 var cardInfo = $(this).find(".cardName").html();
+			 $(".cardInfo .cardName").text(cardInfo);
+	})
+	
+	$(".noCard").on("tap",function(){
+			 document.getElementsByTagName('html')[0].className = "overflow";
+			 document.getElementById('cardList').className="popBox";
+			 var index = $(".popBoxContent .listItem.active").index();
+			 mui('.popBoxContent').scroll().scrollTo(0,-77*index,100);
+	})
+	
+	document.querySelector('.addNewCard').onclick = function(){
+			 mui.openWindow({
+			   url: "addCard.html"
+			 });
+	}
+</script>

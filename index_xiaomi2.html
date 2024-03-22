@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+			<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+				<!--侧滑菜单部分-->
+				<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+					<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="title">侧滑导航</div>
+							<div class="content">
+			
+							</div>
+							<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 1
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 2
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 3
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 4
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 5
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 6
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 1
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 2
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 3
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 4
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 5
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 6
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 1
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 2
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 3
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 4
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 5
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">
+										Item 6
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside>
+				<!--主界面部分-->
+				<div class="mui-inner-wrap">
+					<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="top-content">
+								<div class="header">
+									<div class="header_con">
+										<div class="icons menu_icon" id="offCanvasShow">
+											<span class="iconfont icon-menu-line"></span>
+										</div>
+										<div class="search-content">
+											<input class="search-input" type="text" required id="searchInput"/>
+											<label class="mui-placeholder" for="searchInput">
+												<span class="iconfont icon-search-line"></span>
+												<span class="iconText">búsqueda</span>
+											</label>
+										</div>
+										<div class="icons shopping-car">
+											<span class="iconfont icon-shopping-cart-line"></span>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>	
+					<!-- off-canvas backdrop -->
+					<div class="mui-off-canvas-backdrop"></div>
+				</div>
+			</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script type="text/javascript" charset="UTF-8">
+   mui.init({
+	   pullRefresh : {
+	       container:'#productListContent',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+	       up : {
+	         height:50,//可选.默认50.触发上拉加载拖动距离
+	         auto:true,//可选,默认false.自动上拉加载一次
+	         contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+	         contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+	         callback:getAjax //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+	       }
+	     }
+   });
+   mui.plusReady(function(){
+    
+   });
+   mui.ready(function(){
+    
+    });
+   
+   function getAjax(){
+	   mui.ajax('http://server-name/login.php',{
+	   	data:{
+	   		username:'username',
+	   		password:'password'
+	   	},
+	   	dataType:'json',//服务器返回json格式数据
+	   	type:'post',//HTTP请求类型
+	   	timeout:10000,//超时时间设置为10秒；
+	   	headers:{'Content-Type':'application/json'},	              
+	   	success:function(data){
+	   		//服务器返回响应，根据响应结果，分析是否登录成功；
+			
+			//this.endPullupToRefresh(true|false);必须要结束数据
+	   	},
+	   	error:function(xhr,type,errorThrown){
+	   		//异常处理；
+	   		console.log(type);
+	   	}
+	   });
+   }
+   
+   //绑定分类点击事件
+   mui('.firstCateCategory .mui-scroll').on('tap', '.mui-control-item', function(e){
+     console.log(this);
+	 //通过一级分类获取二级分类
+   });
+   
+   mui('.secondCategory .mui-scroll').on('tap', '.mui-control-item', function(e){
+     console.log(this);
+	 //通过二级分类获取底部商品
+   });
+  </script>

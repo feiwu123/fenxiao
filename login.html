@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登入</title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/xiaomi/login.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<div class="content">
+				<div class="LoginCon">
+					<div class="topCon">
+						<div><img src="images/login/login1.png" /></div>
+						<div style="margin-top: 16px;"><img src="images/login/login2.png" /></div>
+					</div>
+					<div class="formCon">
+						<div class="formInput">
+							<label>Usuario / Número celular</label>
+							<input type="text" class="loginInput" name="userName"  id="userName"/>
+						</div>
+						<div class="formInput">
+							<label>Contraseña</label>
+							<input type="password" class="loginInput" name="passWord" id="password"/>
+							<span class="iconfont icon-eye-line" id="showPassword"></span>
+						</div>
+						<div class="forgetPassword">
+							<span>¿Olvidaste la contraseña?</span>
+						</div>
+						<div class="loginBtn btn" id="login">
+							Iniciar sesión
+						</div>
+						<div class="createUser btn" id="createUser">
+							CREAR CUENTA
+						</div>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" class="myCheckbox" id="myCheckbox1"/>
+						<label for="myCheckbox1">He leído y estoy de acuerdo <a class="rulesTxt">《Acuerdo de registro de usuario》</a></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+	 
+	 document.getElementById("showPassword").onclick = function(){
+		 console.log(this.className);
+		 if(~this.className.indexOf('icon-eye-line')){
+			 document.getElementById("password").attributes.type.value = "text";
+			 this.className = "iconfont icon-eye-off-line";
+		 }else{
+			 document.getElementById("password").attributes.type.value = "password";
+			 this.className = "iconfont icon-eye-line"
+		 }
+	 }
+	 
+	 document.getElementById("createUser").onclick = function(){
+		 mui.openWindow({
+		   url: "createUser.html",
+		   id: "createUser"
+		 });
+	 }
+	 
+	 document.querySelector('.forgetPassword').onclick = function(){
+		 mui.openWindow({
+		   url: "forgetPassword.html",
+		   id: "forgetPassword"
+		 });
+	 }
+	 
+	 //登入
+	 $("#login").on("click",(e)=>{
+		 if($("#myCheckbox1").prop('checked')){
+			userLogin(); 
+		 }else{
+			mui.toast("请勾选用户手册!");
+		 }
+	 })
+</script>
+<script src="js/fxxt/login.js"></script>

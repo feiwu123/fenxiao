@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/xiaomi/orderSubmit.css" />
+		<link rel="stylesheet" href="css/xiaomi/address.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line black"></a>
+					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">返回首页</a>
+					<h1 class="mui-title">Información del nuevo destinatario</h1>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<!-- 内容 -->
+						<div id="addNewAddress" style="background-color: #fff;"> 
+							<div class="addressForm">
+								<div class="inputGroup require-cl halfFlex">
+									<div class="title">Apellidos<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="address_firstName" id="address_firstName"/>
+									</div>
+								</div>
+								<div class="inputGroup require-cl halfFlex">
+									<div class="title">Nombre<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="address_lastname" id="address_lastname"/>
+									</div>
+								</div>
+								<div class="inputGroup require-cl halfFlex">
+									<div class="title">Teléfono Celular<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="address_mobilePhone" id="address_mobilePhone"/>
+									</div>
+								</div>
+								<div class="inputGroup require-cl halfFlex">
+									<div class="title">Correo electrónico<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="addres_email" id="addres_email"/>
+									</div>
+								</div>
+								<div class="inputGroup halfFlex">
+									<div class="title">Otro Teléfono (opcional)<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="address_phone" id="address_phone"/>
+									</div>
+								</div>
+								<div class="inputGroup halfFlex require-cl">
+									<div class="title">Código Postal<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="address_postcode" id="address_postcode"/>
+									</div>
+								</div>
+								<div class="inputGroup halfFlex require-cl">
+									<div class="title">Estado<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<select id="address_province" name="address_province" class="form-control" data-type="2">
+											
+										</select>	
+									</div>
+								</div>
+								<div class="inputGroup halfFlex require-cl">
+									<div class="title">Alcaldía/Delegación/Municipio<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<select id="address_city" name="address_city" class="form-control" data-type="3">
+											<option value="">Seleccione una Ciudad</option>
+											<option value="50">Comondú</option>
+											<option value="51">La Paz</option>
+											<option value="52">Loreto</option>
+											<option value="53">Los Cabos</option>
+											<option value="54">Mulegé</option>
+										</select>
+									</div>
+								</div>
+								<div class="inputGroup halfFlex require-cl">
+									<div class="title">Colonia<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="address_suburb" id="address_suburb" maxlength="35"/>
+									</div>
+								</div>
+								<div class="inputGroup halfFlex require-cl">
+									<div class="title">Entre calles<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" name="address_crossStreet" id="address_crossStreet"/>
+									</div>
+								</div>
+								<div class="inputGroup  require-cl">
+									<div class="title">Domicilio (Núm. Interior, etc)<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" id="address_reference" name="address_reference" maxlength="25"/>
+									</div>
+								</div>
+								<div class="inputGroup  require-cl">
+									<div class="title">Calle<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" id="address_additionalInformation" name="address_additionalInformation" maxlength="29"/>
+									</div>
+								</div>
+								<div class="inputGroup  require-cl">
+									<div class="title">Número<span class="requireIcon">*</span></div>
+									<div class="inputElement">
+										<input class="form-control" oninput="if(value.length>5)value=value.slice(0,5)" id="address_sign_building" name="address_sign_building"  value=""/>
+									</div>
+								</div>
+								<div class="isDefaultAddress">
+									<div>Establecer como predeterminada</div>
+									<div class="mui-switch mui-switch-mini mui-active">
+									  <div class="mui-switch-handle"></div>
+									</div>
+								</div>
+								<div class="btn-submit" id="comfirmHome">
+									Guardar dirección
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+</script>

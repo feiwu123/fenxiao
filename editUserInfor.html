@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+		<link rel="stylesheet" href="css/xiaomi/editUser.css"/>
+		<link rel="stylesheet" href="js/photoClip-master/dist/amazeui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line black"></a>
+					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">返回首页</a>
+					<h1 class="mui-title">PERFI</h1>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<!-- 内容 -->
+						<input class="am-hide" type="file" id="file">
+						<div class="userInformation">
+							<div class="avator" id="toggle-file">
+								<img src="images/logo.png" calss="avatarImg" id="img-view"/>
+								<div class="cameraIcon">
+									<span class="iconfont icon-camera-line"></span>
+								</div>
+							</div>
+							<div class="elementItem">
+								<div class="elementName">
+									<label for="name" class="labelName">Usuario</label>
+								</div>
+								<div class="elementInput">
+									<input name="nick_name" class="eleInput" disabled/>
+								</div>
+							</div>
+							<div class="elementItem">
+								<div class="elementName">
+									<label for="nick_name" class="labelName">apodo</label>
+								</div>
+								<div class="elementInput">
+									<input name="nick_name" class="eleInput"/>
+								</div>
+							</div>
+							<div class="elementItem">
+								<div class="elementName">
+									<label for="birthday" class="labelName">Cumpleaños</label>
+								</div>
+								<div class="elementInput" id="datePicker">
+									<input name="birthday" class="eleInput"/>
+									<span class="iconfont icon-arrow-drop-down-fill"></span>
+								</div>
+							</div>
+							<div class="elementItem">
+								<div class="elementName">
+									<label for="sex" class="labelName">Sexo</label>
+								</div>
+								<div class="elementInput" id="sexPicker">
+									<input name="sexTxt" class="eleInput"/>
+									<input name="sexVal" type="hidden" />
+									<span class="iconfont icon-arrow-drop-down-fill"></span>
+								</div>
+							</div>
+							<div class="elementItem">
+								<div class="elementName">
+									<label for="electron" class="labelName">correo electrónico</label>
+								</div>
+								<div class="elementInput">
+									<input name="electron" class="eleInput"/>
+									<!-- <span class="navigateToEmail">Verificar</span> -->
+									<div>
+										<span class="iconfont icon-check-fill" style="color: green;"></span>
+									</div>
+								</div>
+							</div>
+							<div class="elementItem">
+								<div class="elementName">
+									<label for="celular" class="labelName">celular</label>
+								</div>
+								<div class="elementInput">
+									<input name="celular" class="eleInput"/>
+								</div>
+							</div>
+							<div class="comfirmDiv">
+								<div id="comfirmBtn">确认</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		
+		<div class="am-popup" id="my-popup">
+			<div class="am-popup-inner">
+				<div class="am-popup-hd">
+					<h4 class="am-popup-title">裁剪图片</h4>
+					<span data-am-modal-close class="am-close">&times;</span>
+				</div>
+				<div class="am-popup-bd">
+					<!-- 裁剪显示区 -->
+					<div class="am-margin-bottom-sm" id="clip"></div>
+		
+					<button type="button" class="am-btn am-btn-primary" id="clipBtn">
+						裁剪
+					</button>
+		
+					<input class="am-hide" type="file" id="file">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script src="js/photoClip-master/dist/amazeui.min.js"></script>
+<script src="js/photoClip-master/dist/iscroll-zoom.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/photoClip-master/dist/hammer.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/photoClip-master/dist/photoClip.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.picker.min.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+	 
+	//时间选择 
+	 $("#datePicker").on("tap",function(){
+		 var _self = this;
+		_self.picker = new mui.DtPicker({
+			type:"date",
+			beginDate: new Date(1900, 1, 1),//设置开始日期
+		 });
+		 _self.picker.show(function (selectItems) { 
+			console.log(selectItems);//{text: "2016",value: 2016} 
+			$("input[name='birthday']").val(selectItems.text);			
+		})
+	 })
+	 //性别选择
+	 $("#sexPicker").on("tap",function(){
+		 var _self = this;
+		 _self.picker = new mui.PopPicker(); 
+		 _self.picker.setData([{value:'1',text:'Masculino'},{value:'2',text:'Femenino'},{value:'0',text:'Secreto'}]);
+		 _self.picker.show((item)=>{
+			 console.log(item);
+			 var txt = item[0].text;
+			 var val = item[0].value;
+			 $("input[name='sexTxt']").val(txt);
+			 $("input[name='sexVal']").val(val); 
+		 });
+	 })
+</script>
+<script>
+$(function() {
+	var $clip = $("#clip");
+	var $file = $("#file");
+	var $imgView = $("#img-view");
+	var $popup = $("#my-popup");
+	$("#toggle-file").on('tap',function() {
+		$file.click();
+		$popup.modal({
+			closeViaDimmer: false
+		});
+	});
+
+	$clip.photoClip({
+		width: 250,
+		height: 250,
+		fileMinSize: 20,
+		file: $file,
+		ok: "#clipBtn",
+		loadStart: function() {
+			mui.toast("照片读取中");
+		},
+		loadProgress: function(progress) {
+			//mui.toast(progress);
+		},
+		loadError: function() {
+			mui.toast("图片加载失败");
+		},
+		loadComplete: function() {
+			//mui.toast("照片读取完成");
+		},
+		imgSizeMin: function(kbs) {
+			//mui.toast(kbs, "上传图片过小");
+			mui.toast("上传图片过小");
+		},
+		clipFinish: function(dataURL) {
+			document.getElementById("img-view").src = dataURL;
+			$popup.modal("close");
+		}
+	});
+})
+</script>

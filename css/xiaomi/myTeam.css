@@ -1,0 +1,48 @@
+.mui-bar-nav~.mui-content{
+	padding-top: 58px;
+}
+.mui-content{
+	background-color:#fff;
+}
+.teamList{
+	padding: 0 16px;
+}
+.teamList .teamItem{
+	height: 110px;
+	display: flex;
+	align-items: center;
+	gap: 13px;
+	border-bottom: 1px solid #ddd;
+}
+.teamItem .avatarImg{
+	width: 62px;
+	height: 62px;
+	border-radius: 32px;
+	overflow: hidden;
+}
+.teamItem .avatarImg img{
+	width: 100%;
+}
+.teamDetail .teamCon{
+	display: flex;
+	align-items: center;
+}
+.teamDetail .teamCon .teamName{
+	font-size: 16px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 600;
+	color: #000000;
+}
+.teamDetail .teamCon .teamLevel{
+	width: 63px;
+}
+.teamDetail .teamCon .teamLevel img{
+	width: 100%;
+}
+.teamDetail .amount{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #E6403A;
+	margin-top: 5px;
+}

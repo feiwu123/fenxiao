@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4400386 */
+  src: url('iconfont.woff2?t=1706750126826') format('woff2'),
+       url('iconfont.woff?t=1706750126826') format('woff'),
+       url('iconfont.ttf?t=1706750126826') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add-circle-line:before {
+  content: "\e800";
+}
+
+.icon-edit-line:before {
+  content: "\e683";
+}
+
+.icon-map-pin-3-line:before {
+  content: "\e782";
+}
+
+.icon-camera-line:before {
+  content: "\e79d";
+}
+
+.icon-delete-bin-line:before {
+  content: "\e827";
+}
+
+.icon-home-3-line:before {
+  content: "\e65f";
+}
+
+.icon-dizhi:before {
+  content: "\e602";
+}
+
+.icon-file-copy-line:before {
+  content: "\e6c8";
+}
+
+.icon-more-fill:before {
+  content: "\e84d";
+}
+
+.icon-a-018_dianpu1:before {
+  content: "\e601";
+}
+
+.icon-bill-line:before {
+  content: "\e6bf";
+}
+
+.icon-file-user-line:before {
+  content: "\e6d9";
+}
+
+.icon-bank-card-line:before {
+  content: "\e70e";
+}
+
+.icon-exchange-cny-fill:before {
+  content: "\e714";
+}
+
+.icon-trophy-line:before {
+  content: "\e728";
+}
+
+.icon-logout-box-r-line:before {
+  content: "\e842";
+}
+
+.icon-arrow-left-s-line:before {
+  content: "\e80d";
+}
+
+.icon-eye-line:before {
+  content: "\e82f";
+}
+
+.icon-eye-off-line:before {
+  content: "\e830";
+}
+
+.icon-price-tag-3-line:before {
+  content: "\e71e";
+}
+
+.icon-shopping-cart-line:before {
+  content: "\e725";
+}
+
+.icon-truck-line:before {
+  content: "\e798";
+}
+
+.icon-arrow-drop-down-fill:before {
+  content: "\e808";
+}
+
+.icon-check-fill:before {
+  content: "\e818";
+}
+
+.icon-close-line:before {
+  content: "\e81f";
+}
+
+.icon-menu-line:before {
+  content: "\e84c";
+}
+
+.icon-search-line:before {
+  content: "\e851";
+}
+

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="overflow">
+	<head>
+		<meta charset="utf-8">
+		<title>详情页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/xiaomi/detail.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+		
+		<div id="app">
+			<!-- 列表按钮 购物车按钮 -->
+			<div class="menuList">
+				<div class="topmenuICon menuIcon" id="offCanvasShow">
+					<span class="iconfont icon-menu-line"></span>
+				</div>
+				<div class="topmenuICon shopIcon">
+					<span class="iconfont icon-shopping-cart-line"></span>
+					<span class="mui-badge mui-badge-danger shopIconNumber">5</span>
+				</div>
+			</div>
+			
+			<div class="topCon">
+				<div class="productMain">
+					<div id="slider" class="mui-slider" >
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="../images/yuantiao.jpg">
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="./images/shuijiao.jpg">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="./images/muwu.jpg">
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="./images/cbd.jpg">
+								</a>
+							</div>
+							<!-- 第四张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="./images/yuantiao.jpg">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="./images/shuijiao.jpg">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row productInfo">
+				<div class="info">
+					<div class="priceCon">
+						<div class="price">
+							<span class="productPrice">$999.00</span>
+						</div>
+						<div class="sellNum">
+							月销<span class="sellNum">1000</span>
+						</div>
+					</div>
+					<div class="productTitle">
+						<div class="title">
+							Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+						</div>
+						<div class="shareBtn">
+							<div class="shareTxt">
+								share
+							</div>
+							<div class="sharePrice">
+								<span class="currencyIcon">$</span><span class="commission">89</span><span class="currency">MXN</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row productMessage">
+				<div class="messageLists">
+					<div class="messageItem">
+						<div class="shortIcon">
+							<span class="iconfont icon-truck-line"></span>
+						</div>
+						<div class="expressMessage">
+							<div class="title">
+								Opciones de envío
+							</div>
+							<div class="des">
+								ENVÍOS A DOMICILIO Envío GRATIS en compras mayores a $1,500MXN Costo de envío $99MXN en compras menores a $1,500MXN
+								RECOGE GRATIS EN TIENDAS Xiaomi Store
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="messageItem">
+						<div class="shortIcon">
+							<span class="iconfont icon-price-tag-3-line"></span>
+						</div>
+						<div class="coupsMessage">
+							<div class="title">
+								Promoción Especial
+							</div>
+							<div class="des">
+								Paga con DiDi Pay y obtén un 10% de descuento. Monto máximo de compra $1,500
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 商品详情 -->
+			<div class="productDetail">
+				<div class="firstTitle">
+					<div class="line"></div>
+					<div>商品详情</div>
+					<div class="line"></div>
+				</div>
+				<div class="productDetailContent">
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		</div>
+		</div>
+		<!-- off-canvas backdrop -->
+		<div class="mui-off-canvas-backdrop"></div>
+		</div>
+		<!-- 底部加入购物车和立即购买 -->
+		<div class="bottomCon">
+			<div class="joinShopCar openPop">
+				<div class="shopCarBtn">
+					<span class="iconfont icon-shopping-cart-line"></span>
+					<span class="mui-badge mui-badge-danger">5</span>
+				</div>
+			</div>
+			<div class="buyNow openPop">
+				<div class="buyBtn">
+					Compra ahora
+				</div>
+			</div>
+		</div>
+	</div>
+	
+			
+<!--下拉弹窗选择属性 -->
+			<div class="popBox" id="guige">
+				<div class="boxshadow">
+				</div>
+				<div class="popContent">
+					<div class="productGuige">
+						<div class="mui-scroll-wrapper popBoxContent">
+							<div class="mui-scroll">
+								<div class="proInformation">
+									<div class="productImg">
+										<img src="images/login-1.png"/>
+									</div>
+									<div class="productPrice">
+										<div class="price">
+											$999.00
+										</div>
+										<div class="chooseAttrs">
+											请选择规格数量
+										</div>
+									</div>
+								</div>
+								<div class="texAttr proAttr">
+									<div class="title">文字属性</div>
+									<div class="attrCon">
+										<ul>
+											<li class="active">属性一</li>
+											<li>属性一</li>
+											<li>属性一</li>
+											<li>属性一</li>
+											<li>属性一</li>
+											<li>属性一</li>
+											<li>属性一</li>
+											<li>属性一</li>
+										</ul>
+									</div>
+								</div>
+								<hr>
+								
+								<div class="imgAttr proAttr">
+									<div class="title">图文属性</div>
+									<div class="attrCon">
+										<ul>
+											<li class="active">
+												<div class="attrImg">
+													<img class="attrImgSmall" src="images/logo.png"/>
+												</div>
+												<div class="attrName">
+													<span>属性标题属性标题属性标题</span>
+												</div>
+											</li>
+											<li>
+												<div class="attrImg">
+													<img class="attrImgSmall" src="images/logo.png"/>
+												</div>
+												<div class="attrName">
+													<span>属性标题属性标题属性标题</span>
+												</div>
+											</li>
+											<li>
+												<div class="attrImg">
+													<img class="attrImgSmall" src="images/logo.png"/>
+												</div>
+												<div class="attrName">
+													<span>属性标题属性标题属性标题</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<hr>
+								
+								<div class="numberBox proAttr">
+									<div class="title">Número</div>
+									<div class="mui-numbox">
+									  <!-- "-"按钮，点击可减小当前数值 -->
+									  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									  <input class="mui-numbox-input" type="number" />
+									  <!-- "+"按钮，点击可增大当前数值 -->
+									  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="closeIcon">
+						<span class="iconfont icon-close-line"></span>
+					</div>
+					<div class="clickBtn hide" id="addCarshop">
+						Agregar al carrito
+					</div>
+					<div class="clickBtn hide" id="buyNow">
+						Compra ahora
+					</div>
+					<div class="clickBtn" id="disabledBtn">
+						Compra ahora
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script type="text/javascript" charset="UTF-8">
+   mui.init({
+
+   });
+   mui.plusReady(function(){
+    
+   });
+   mui.ready(function(){
+    
+    });
+   
+   function getAjax(){
+	   mui.ajax('http://server-name/login.php',{
+	   	data:{
+	   		username:'username',
+	   		password:'password'
+	   	},
+	   	dataType:'json',//服务器返回json格式数据
+	   	type:'post',//HTTP请求类型
+	   	timeout:10000,//超时时间设置为10秒；
+	   	headers:{'Content-Type':'application/json'},	              
+	   	success:function(data){
+	   		//服务器返回响应，根据响应结果，分析是否登录成功；
+			
+			//this.endPullupToRefresh(true|false);必须要结束数据
+	   	},
+	   	error:function(xhr,type,errorThrown){
+	   		//异常处理；
+	   		console.log(type);
+	   	}
+	   });
+   }
+   mui('.mui-scroll-wrapper').scroll();
+   
+   var chooseAttr = "已选中:";
+   mui('#guige').on("tap","ul li",function(e){
+	   var siblingsEle = getSiblings(this);
+	   siblingsEle.forEach((item,index)=>{
+		   item.className = "";
+	   })
+	   this.className = "active";
+	   var chooseAttr = "已选中:";
+	   var activeAttrName = $(this).find('.attrName span').html();
+	   chooseAttr = chooseAttr + activeAttrName;
+	   $(".chooseAttrs").html('123');
+   })
+   mui(".bottomCon").on("tap",".openPop",function(e){
+	   document.getElementsByTagName('html')[0].className = "overflow";
+	   document.getElementById('guige').className="popBox";
+	   mui('.popBoxContent').scroll().scrollTo(0,0,100);
+   })
+   
+   function chooseAttrsTxt(){
+	   var attrEle = $("#guige ul");
+	   var activeAttr = [] ;
+	   var activeProp = [];
+	   if(attrEle.length<=0){
+		   return false;
+	   }
+	   attrEle.get().forEach((item,index)=>{
+		   activeAttr.push($(item).find('li.active').data('title'));
+		   activeProp.push($(item).find('li.active input').val());
+	   })
+	   chooseAttr = chooseAttr+activeAttr.join(',');
+	   $('.chooseAttrs').html(activeAttr.join(','));
+   }
+   
+   function getSiblings(element) {
+       var siblings = []; // 存放同级元素的数组
+       if (element.parentNode && element.parentNode.children) {
+           for (var i = 0; i < element.parentNode.children.length; i++) {
+               var child = element.parentNode.children[i];
+               if (child !== element && child.nodeType === 1) {
+                   siblings.push(child);
+               }
+           }
+       }
+       return siblings;
+   }
+   
+   document.querySelector('.closeIcon').onclick = function(){
+	   document.getElementsByTagName('html')[0].className = "";
+	   document.getElementById('guige').className = "popBox visible";
+   }
+   
+  </script>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/xiaomi/orderSubmit.css" />
+		<link rel="stylesheet" href="css/xiaomi/orderDetail.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<div class="mui_head_bg">
+				</div>	
+				<header class="mui-bar mui-bar-nav">
+					<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line white"></a>
+					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">返回首页</a>
+					<h1 class="mui-title"></h1>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<!-- 选择门店 -->
+					<div class="orderState row">
+					</div>
+					<div class="shopChosen">
+						<div class="orderStateMsg">
+							<div class="title">已付款</div>
+							<div class="msg">感谢您的信任，期待再次光临</div>
+						</div>
+						<div class="selectShop">
+							<div class="selectTitle">
+								<div class="title">
+									<svg t="1706265608742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1559" width="32" height="32"><path d="M328.8 461.632h489.184v367.36H328.8v-367.36z" fill="#FAE2D6" p-id="1560"></path><path d="M240.512 526.784l-112.416-112.416 1.92-18.912c11.424-111.296 23.104-201.696 23.232-202.592l4.544-34.88 707.776 0.16 4.64 34.72c0.128 1.12 14.688 111.36 23.36 205.28l1.76 18.688-98.88 98.88-94.08-52.224-100.352 60.8-97.184-60.128-95.808 58.24-81.12-56.384-87.392 60.768z m264.736-156.48l97.216 60.16 98.176-59.456 81.92 45.472 29.6-29.6c-5.44-55.168-12.384-113.088-16.832-148.8L228.256 238.016c-4 32.768-10.272 85.76-16.672 146.72l38.176 38.176 78.144-54.4 84.096 58.528 93.248-56.704z" fill="#333333" p-id="1561"></path><path d="M857.824 869.12H165.76v-432h80v352h532.064v-352h80v432z" fill="#333333" p-id="1562"></path><path d="M648.032 806.4h-80v-118.4h-112.48v118.4h-80V608h272.48v198.4z" fill="#333333" p-id="1563"></path></svg>
+									<span style="display:inline-block;margin-left:5px">到店自提</span>
+								</div>
+							</div>
+							<div class="shopAddress">
+								[Oceanía]  Ciudad de México Venustiano Carranza Moctezuma 2a Sección
+							</div>
+						</div>
+						
+						<div class="selectShop">
+							<div class="selectTitle">
+								<div class="title">
+									<svg t="1706265499462" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1421" width="32" height="32"><path d="M776.5504 447.38048l-152.93952-113.792-41.61024-30.9504-41.67168 30.9504-153.1392 113.76128-0.04096 70.5024-0.1536 287.72864h389.5552V447.38048z" fill="#FAE2D6" p-id="1422"></path><path d="M143.63136 525.28128l-47.71328-64.22016 416.80384-309.62176 416.15872 309.632-47.75936 64.18944-368.44032-274.12992-369.0496 274.1504z" fill="#333333" p-id="1423"></path><path d="M816.54784 855.5776H208.18944l0.39936-454.35904 80 0.07168-0.32768 374.28736h448.28672V401.28h80v454.2976z" fill="#333333" p-id="1424"></path><path d="M637.47072 795.50976l-80-0.06144 0.08704-125.54752h-90.368v125.568H387.18976v-205.568h250.42944l-0.14848 205.60896z" fill="#333333" p-id="1425"></path></svg>
+									<span style="display:inline-block;margin-left:5px">送货上门</span>
+								</div>
+							</div>
+							<div class="shopAddress useraddress">
+								<div class="name"><span>Jane Cooper</span><span class="phone">18458023125</span></div>
+								<div class="addressDes">2972 Westheimer Rd. Santa Ana, Illinois</div>
+							</div>
+						</div>	
+						
+					<!-- 内容 -->
+					<div class="orderAmount">
+						<div class="shopCarList orderList">
+							<div class="orderItem">
+								<div class="shopCarItem">
+									<div class="proImg">
+										<img src="images/login-1.png" />
+									</div>
+									<div class="proInfo">
+										<div class="proTitle">
+											Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+										</div>
+										<div class="props">
+											<div class="propItem">
+												<span>128GB;Black</span>
+								<!-- 				<span class="iconfont icon-arrow-drop-down-fill trans45"></span> -->
+											</div>
+										</div>
+										<div class="priceNum">
+											<div class="marketPrice">$4999.00MXN</div>
+										</div>
+									</div>
+								</div>
+								<div class="numberBoxes">
+									<div class="mui-numbox" data-numbox-min="1" data-numbox-step="1">
+									  <!-- "-"按钮，点击可减小当前数值 -->
+									  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									  <input class="mui-numbox-input" type="number" />
+									  <!-- "+"按钮，点击可增大当前数值 -->
+									  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<div class="orderItem">
+								<div class="shopCarItem">
+									<div class="proImg">
+										<img src="images/login-1.png" />
+									</div>
+									<div class="proInfo">
+										<div class="proTitle">
+											Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+										</div>
+										<div class="props">
+											<div class="propItem">
+												<span>128GB;Black</span>
+								<!-- 				<span class="iconfont icon-arrow-drop-down-fill trans45"></span> -->
+											</div>
+										</div>
+										<div class="priceNum">
+											<div class="marketPrice">$4999.00MXN</div>
+										</div>
+									</div>
+								</div>
+								<div class="numberBoxes">
+									<div class="mui-numbox" data-numbox-min="1" data-numbox-step="1">
+									  <!-- "-"按钮，点击可减小当前数值 -->
+									  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+									  <input class="mui-numbox-input" type="number" />
+									  <!-- "+"按钮，点击可增大当前数值 -->
+									  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+									</div>
+								</div>
+							</div>
+							<hr>
+						</div>
+						<div class="amountTotal">
+							<div class="proNum amountItem">
+								<span calss="title">商品数量</span>
+								<span class="val">4</span>
+							</div>
+							<div class="total amountItem">
+								<span calss="title"></span>
+								<span class="val">$1999.00MXN</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="orderDetail">
+						<div class="orderDetailItem">
+							<div>订单编号</div>
+							<div>2023050503580488373<span class="iconfont icon-file-copy-line"></span></div>
+						</div>
+						<div class="orderDetailItem">
+							<div>下单时间</div>
+							<div>2020-10-21 11:22:33</div>
+						</div>
+					</div>
+						
+					</div>
+				</div>
+				</div>
+				<div class="bottomCom">
+					<div class="bottomBtn">
+						Cancelar
+					</div>
+					<div class="bottomBtn">
+						Eliminar
+					</div>
+					<div class="bottomBtn">
+						查看兑换码
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+	
+	<!-- 门店选择弹窗 -->
+	<div class="popBox visible" id="storeList">
+		<div class="boxshadow">
+		</div>
+		<div class="popContent">
+			<div class="shopContent">
+				<div class="topHead">
+					<span class="title">更换门店</span>
+				</div>
+				<div class="mui-scroll-wrapper popBoxContent">
+					<div class="mui-scroll">
+						<!-- 弹窗内容 -->
+						<div class="shopList">
+							<div class="listItem active"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span class="storeName">[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span>[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span>[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+							<div class="listItem"><span>[Toreo ]  Estado de México Naucalpan de Juárez Lomas de Sotelo</span><span class="iconfont icon-check-fill"></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="closeIcon">
+				<span class="iconfont icon-close-line"></span>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+	 
+	mui('.popBoxContent').scroll({
+		deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+	});
+	 
+	 mui(".props").on("tap",".propItem",function(e){
+	 	   document.getElementsByTagName('html')[0].className = "overflow";
+	 	   document.getElementById('guige').className="popBox";
+		   
+	 	   mui('.popscrollContent').scroll().scrollTo(0,0,100);
+	 })
+	 
+	 //规格选择
+	 mui('#guige').on("tap","ul li",function(e){
+	 	   var siblingsEle = getSiblings(this);
+	 	   siblingsEle.forEach((item,index)=>{
+	 		   item.className = "";
+	 	   })
+	 	   this.className = "active";
+	 })
+	 function getSiblings(element) {
+	     var siblings = []; // 存放同级元素的数组
+	     if (element.parentNode && element.parentNode.children) {
+	         for (var i = 0; i < element.parentNode.children.length; i++) {
+	             var child = element.parentNode.children[i];
+	             if (child !== element && child.nodeType === 1) {
+	                 siblings.push(child);
+	             }
+	         }
+	     }
+	     return siblings;
+	 }
+	 
+	 
+	 
+	 //全选
+	 $("#amountRadio").on("click",function(e){
+		 console.log(this.checked);
+		 if(this.checked){
+			 $(".shopCarItem .myCheckbox").prop('checked',true);
+			  let checkedNum = $(".shopCarItem .myCheckbox:checked").length;
+			 $(".choseAmount").html(checkedNum);
+		 }else{
+			 $(".shopCarItem .myCheckbox").prop('checked',false);
+			 $(".choseAmount").html(0);
+		 }
+	 })
+	 //单选
+	 $(".shopCarItem .myCheckbox").on("click",function(e){
+		 let checkboxNum = $(".shopCarItem .myCheckbox").length;
+		 let checkedNum = $(".shopCarItem .myCheckbox:checked").length;
+		 if(checkboxNum == checkedNum){
+			 $("#amountRadio").prop('checked',true);
+		 }else{
+			 $("#amountRadio").prop('checked',false);
+		 }
+		 $(".choseAmount").html(checkedNum);
+	 })
+	 
+	 document.querySelector('.popBox .closeIcon').onclick = function(){
+	 	   document.getElementsByTagName('html')[0].className = "";
+	 	   document.getElementById('storeList').className = "popBox visible";
+	 }
+	 
+	 mui('.popBoxContent').on("tap",".listItem",function(){
+		 $(".popBoxContent .listItem").removeClass("active");
+		 $(this).addClass("active");
+		 document.getElementsByTagName('html')[0].className = "";
+		 document.getElementById('storeList').className = "popBox visible";
+		 var shopAddress = $(this).find(".storeName").html();
+		 $(".selectShop .shopAddress").html(shopAddress);
+	 })
+	 
+	 $("#openShopList").on("tap",function(){
+		 document.getElementsByTagName('html')[0].className = "overflow";
+		 document.getElementById('storeList').className="popBox";
+		 var index = $(".popBoxContent .listItem.active").index();
+		 mui('.popBoxContent').scroll().scrollTo(0,-77*index,100);
+	 })
+</script>

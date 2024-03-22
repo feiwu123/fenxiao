@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<style>
+	.mui-bar{
+		background-color: transparent;
+	}	
+	.mui-content{
+		background-color: #f6f6f6;
+	}
+	.cardState{
+		text-align: center;
+	}
+	.cardState .cardMsg .title{
+		margin-top: 36px;
+		font-size: 16px;
+		font-family: PingFang HK, PingFang HK;
+		font-weight: 400;
+		color: #000000;
+	}
+	.cardState .cardMsg .arriveDay{
+		font-size: 14px;
+		font-family: PingFang HK, PingFang HK;
+		font-weight: 400;
+		color: #999999;
+		margin-top: 16px;
+	}
+	.cards_process{
+		background-color: #fff;
+		padding: 16px;
+		margin-top: 32px;
+	}
+	.cards_process .cardItem{
+		display: flex;
+		justify-content: space-between;
+		height: 35px;
+		line-height: 35px;
+	}
+	.cards_process .cardItem .title{
+		font-size: 14px;
+		font-family: Inter, Inter;
+		font-weight: 400;
+		color: #666666;
+	}
+	.cards_process .cardItem .val{
+		font-size: 14px;
+		font-family: Inter, Inter;
+		font-weight: 400;
+		color: #000000;
+	}
+	.cards_process .cardItem .val.red{
+		color: #E6403A;
+	}
+	.rowBtn{
+		width: 190px;
+		height: 42px;
+		background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+		border-radius: 6px 6px 6px 6px;
+		line-height: 42px;
+		color: #fff;
+		margin: 32px auto;
+		text-align: center;
+	}
+	</style>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line black"></a>
+					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">返回首页</a>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div style="padding: 16px;">
+					<!-- 内容 -->
+							<div class="cardState">
+								<img src="./images/cards/card_success.png" width="300"/>
+								<div class="cardMsg">
+									<div class="title">提现申请已提交</div>
+									<div class="arriveDay">预计X个工作日到账</div>
+								</div>
+							</div>
+							<div class="row cards_process">
+								<div class="cardItem">
+									<div class="title">订单流水号</div>
+									<div class="val">92813213112312312</div>
+								</div>
+								<div class="cardItem">
+									<div class="title">提现时间</div>
+									<div class="val">2022-10-21 10:22:22</div>
+								</div>
+								<div class="cardItem">
+									<div class="title">提现金额</div>
+									<div class="val red">$999.00MXN</div>
+								</div>
+								<div class="cardItem">
+									<div class="title">提现银行卡号</div>
+									<div class="val">建设银行(尾号9291)</div>
+								</div>
+							</div>
+							<div class="rowBtn">
+								确认
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+</script>

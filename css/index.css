@@ -1,0 +1,550 @@
+/*
+ * @wufei 20240108
+ * 主要的CSS
+ * 
+ * */
+ 
+ @font-face{font-family:'Camphor Pro';src:url('../fonts/CamphorPro-Regular.otf');font-weight:normal}
+ @font-face{font-family:'Camphor Pro Bold';src:url('../fonts/CamphorPro-Bold.otf');font-weight:bold}
+ @font-face{font-family:'Camphor Pro Heavy';src:url('../fonts/CamphorPro-Heavy.otf');font-weight:900}
+ @font-face{font-family:'Camphor Pro Light';src:url('../fonts/CamphorPro-Light.otf');font-weight:300}
+ @font-face{font-family:'Camphor Pro Medium';src:url('../fonts/CamphorPro-Medium.otf');font-weight:500}
+ 
+ @font-face{font-family:'digi';src:url('../fonts/DS-DIGI.TTF');font-weight:500}
+ @font-face{font-family:'digib';src:url('../fonts/DS-DIGIB.TTF');font-weight:500}
+ @font-face{font-family:'digii';src:url('../fonts/DS-DIFII.TTF');font-weight:500}
+ @font-face{font-family:'digit';src:url('../fonts/DS-DIGIT.TTF');font-weight:500}
+ 
+ body{
+	 font-size: 16px;
+	 font-family: Camphor Pro;
+	 background-color: #F9F8F8;
+ }
+ a{
+	 color: #333;
+ }
+ hr{
+	 height: 1px;
+	 border: 0;
+	 margin: 0;
+	 padding: 0;
+	 background-color: #EDEDED;
+ }
+ .black{
+	 color: #000;
+ }
+ .white{
+	 color:#fff;
+ }
+/* 头部 */
+.top-content .header{
+	background-image:url(../images/head/head_bg.png);
+	height: 66px;
+	background-color: linear-gradient(180deg, #EC4B28 0%, rgba(232,110,49,0) 100%);
+	border-radius: 0px 0px 0px 0px;
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header_con{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 10px 10px 10px;
+	box-sizing: border-box;
+	align-items: center;
+}
+.header_con .icons{
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+}
+.header_con .icons .iconfont{
+	font-size: 20px;
+}
+.header_con .menu_icon{
+	padding:0 8px;
+}
+.header_con .shopping-car{
+	padding:0 8px;
+}
+.header_con .search-content{
+	width: 99%;
+}
+.header_con .search-input{
+	height: 36px;
+	margin: 0px;
+	border-radius: 20px 20px 20px 20px;
+	
+}
+.search-content{
+	position: relative;
+}
+.search-content .mui-placeholder{
+	position: absolute;
+	height: 36px;
+	line-height: 36px;
+	left: 17px;
+    top:0px;
+	color: #999999;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.search-input:focus+.mui-placeholder{
+	display: none;
+}
+.search-input:valid+.mui-placeholder{
+	display: none;
+}
+
+
+/* 内容页面 */
+.row{
+	padding: 0 16px;
+}
+.overflow{
+	overflow: hidden;
+}
+
+ul,ul li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.body-content{
+	background-image: url(../images/head/body_bg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	min-height: 200px;
+}
+.sharePage{
+	position: relative;
+}
+.sharePage .qrcode{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	right: 3%;
+	top: 8%;
+	background-color: #fff;
+}
+.sharePage .qrcode img{
+	width: 100%;
+}
+.sharePage #shareBgImg{
+	width: 100%;
+}
+.sharePage .shareLink{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 3%;
+	position: absolute;
+	bottom: 11%;
+	width: 100%;
+}
+.sharePage .shareLink .shareUrls{
+	flex: 1;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 0px 12px;
+	line-height: 40px;
+	font-size: 13px;
+}
+.sharePage .shareLink .copyLink{
+	width: 76px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #E35D22;
+	text-transform: uppercase;
+	background-color: #fff;
+	margin-left: 10px;
+}
+
+/* 轮播图 */
+
+
+
+/* 分类列表 */
+.mui-control-item{
+	text-transform: uppercase;
+}
+.categoryList{
+	margin-left: 3%;
+}
+.firstCateCategory .mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
+	text-transform: uppercase;
+	font-family: Camphor Pro;
+	padding: 0 10px;
+}
+.firstCateCategory .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color: #EF6C2C;
+	border-bottom: 1px solid #EF6C2C;
+	font-weight: 800;
+	position: relative;
+	font-family: Camphor Pro Bold;
+}
+.firstCateCategory .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active:after{
+	content: "";
+	width: calc(100% - 20px);
+	border-bottom: 2px solid #EF6C2C;
+	position: absolute;
+	left: 10px;
+	bottom: 0px;
+}
+.secondCategory{
+	margin-top: 10px;
+}
+.secondCategory .mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
+	text-transform: uppercase;
+	font-family: Camphor Pro;
+	padding: 0 10px;
+	background: #EFEFEF;
+	border-radius: 5px 5px 5px 5px;
+	color: #333;
+}
+.secondCategory .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color: #EF6C2C;
+	border-bottom: 1px solid #EF6C2C;
+	font-weight: 800;
+	position: relative;
+	font-family: Camphor Pro Bold;
+	background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+	border-radius: 5px 5px 5px 5px;
+	color: #fff;
+}
+.secondCategory .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active:after{
+	content: "";
+	width: calc(100% - 20px);
+	border-bottom: 2px solid #EF6C2C;
+	position: absolute;
+	left: 10px;
+	bottom: 0px;
+}
+
+.productList{
+	margin-top: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2%;
+}
+.productList .productItem{
+	width: 49%;
+	background-color: #fff;
+	padding: 10px;
+	margin-bottom: 16px;
+}
+.productList .productItem .productImg img{
+	width: 100%;
+}
+.productList .productItem .productName{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #000000;
+	line-height: 22px;
+	display: -webkit-box; /* Safari */
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-transform: uppercase;
+   margin-top: 5px;
+}
+.productList .productItem  .shareTips{
+	color: #BC8F60;
+	margin-top: 5px;
+	font-size: 12px;
+}
+.productList .productItem  .productPrice{
+	color: #E6403A;
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+
+/* checkbox自定义样式 */
+/* 默认样式 */
+input[type='checkbox'] {
+  display: none; /* 将原生复选框隐藏起来 */
+}
+ 
+.myCheckbox + label {
+  position: relative;
+  padding-left: 25px; /* 添加间距以容纳自定义图标 */
+  cursor: pointer;
+}
+ 
+.myCheckbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc; /* 设置边框样式 */
+  background-color: white; /* 设置未选中时的背景颜色 */
+  box-sizing: border-box;
+}
+ 
+/* 选中时的样式 */
+.myCheckbox:checked + label::after {
+  content: "\2713"; /* Unicode字符表示已选中的图标（如FontAwesome）*/
+  font-family: FontAwesome; /* 引入相关字体库 */
+  color: red; /* 设置已选中时的文本颜色 */
+  position: absolute;
+  background-color: #EF6C2C;
+  color: #fff;
+  top: 0px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+}
+
+/* 返回样式 */
+.mui-bar-nav{
+	background: transparent;
+	border: 0px;
+	box-shadow: 0 0 0 0;
+}
+.mui-bar-nav.mui-bar .mui-icon{
+	font-size: 30px;
+	color: #fff;
+}
+/* 侧边栏 */
+.mui-off-canvas-left, .mui-off-canvas-right{
+	background-color: #fff;	
+}
+#offCanvasSideScroll .content{
+	padding: 30px 16px;
+}
+.closeMenu .icon-menu-line{
+	font-size: 20px;
+}
+#offCanvasSideScroll .userInfo .avator{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 24px 10px;
+}
+#offCanvasSideScroll .userInfo .avator .avatorImg{
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: #f00;
+}
+#offCanvasSideScroll .userInfo .avator .avatorImg img{
+	width: 100%;
+}
+#offCanvasSideScroll .userInfo .avator .userName{	
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+	flex: 1;
+	margin-left: 10px;
+}
+#offCanvasSideScroll .userMenuList{
+	padding-left: 10px;
+}
+#offCanvasSideScroll .userMenuList ul li{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 12px;
+}
+#offCanvasSideScroll .userMenuList ul li .iconfont{
+	font-size: 20px;
+	margin-right: 16px;
+}
+#offCanvasSideScroll .logout{
+	position: absolute;
+	bottom: 30px;
+	left: 16px;
+}
+#offCanvasSideScroll .logout .iconfont{
+	margin-right: 16px;
+}
+
+/* 头部顶部 */
+.mui-bar{
+	height: 58px;
+	background-color: #fff;
+	box-shadow: 0px 0px 3px 0px #ccc;
+}
+.mui-title{
+	line-height: 58px;
+}
+.mui-bar .mui-btn-link{
+	height: 58px;
+	line-height: 58px;
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #666666;
+}
+.mui-bar .icon-menu-line{
+	height: 58px;
+	line-height: 58px;
+}
+.trans45{
+	transform: rotate(-90deg);
+	display: inline-block;
+}
+
+
+/* 商品弹窗 */
+.closeIcon{
+	width: 27px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
+	background-color: #B7B7B7;
+	border-radius: 15px;
+	color: #fff;
+	position: absolute;
+	right: 16px;
+	z-index: 999;
+}
+.popBox{
+	position: fixed;
+	overflow: hidden;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	transition: all .3s;
+}
+.popBox.visible{
+	z-index: -1;
+}
+.popBox .boxshadow{
+	background-color: #000;
+	opacity: 0.3;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.popBox .proInformation{
+	display: flex;
+	gap: 16px;
+	padding: 16px;
+}
+.popBox .proInformation .productImg{
+	width: 84px;
+	height: 84px;
+	overflow: hidden;
+}
+.popBox .proInformation .productImg img{
+	width: 100%;
+}
+.popBox .proInformation .productPrice .price{
+	font-size: 20px;
+	color: #FF0000;
+}
+.popBox .proInformation .productPrice .chooseAttrs{
+	color: #999999;
+	margin-top: 10px;
+}
+.popBox .popContent{
+	height: 72vh;
+	background: #fff;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding: 16px;
+	transform: translateY(0vh);
+	transition: all .3s;
+}
+.popBox.visible .popContent{
+	transform: translateY(200vh);
+}
+.popBox.visible .boxshadow{
+	display: none;
+}
+.popBox .clickBtn{
+	width: calc(100% - 32px);
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	background: linear-gradient(270deg, #F09C3A 0%, #F1D046 100%);
+	border-radius: 10px 10px 10px 10px;
+	opacity: 1;
+	color: #fff;
+	position: absolute;
+	bottom: 16px;
+	z-index: 999;
+}
+.proAttr .title{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #000000;
+	line-height: 22px;
+	-webkit-background-clip: text;
+}
+.popBox .mui-scroll-wrapper{
+	height: 60vh;
+}
+.popBox .mui-scroll-wrapper .proAttr{
+	padding: 16px;
+}
+.texAttr .attrCon{
+	margin-top: 16px;
+}
+.texAttr ul,.imgAttr ul{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px;
+	margin: 0px;
+	gap:8px;
+}
+.texAttr ul li{
+	background: #EFEFEF;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 32px;
+	opacity: 1;
+	background-color: #EFEFEF;
+	min-width: 60px;
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.texAttr ul li.active,.imgAttr ul li.active{
+	border: 2px solid #EF6C2C;
+}
+.imgAttr ul li{
+	width: calc(33% - 8px);
+	background-color: #F7F7F7;
+	padding: 5px;
+	display: block;
+	box-sizing: border-box;
+}
+.imgAttr ul li img{
+	width: 100%;
+}
+.imgAttr ul li .attrName{
+	font-size: 13px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #000000;
+	line-height: 22px;
+}
+.imgAttr .attrCon{
+	margin-top: 16px;
+}
+.proAttr .mui-numbox{
+	margin-top: 16px;
+}
+.popBox hr{
+	border: 1px solid #F4F4F4;
+	width: calc(100% - 32px);
+	padding: 0px;
+	margin: 0px;
+}
+/* 弹窗结束 */
+.mui-content{
+	background-color: #F9F8F8;
+}

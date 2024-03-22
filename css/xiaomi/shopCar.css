@@ -1,0 +1,203 @@
+/* checkbox自定义样式 */
+/* 默认样式 */
+input[type='checkbox'] {
+  display: none; /* 将原生复选框隐藏起来 */
+}
+ 
+.myCheckbox + label {
+  position: relative;
+  padding-left: 25px; /* 添加间距以容纳自定义图标 */
+  cursor: pointer;
+}
+ 
+.myCheckbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid #ccc; /* 设置边框样式 */
+  background-color: white; /* 设置未选中时的背景颜色 */
+  box-sizing: border-box;
+  line-height: 24px;
+}
+.mui-bar-nav~.mui-content{
+	padding-top: 58px;
+	padding-bottom: 53px;
+}
+ 
+/* 选中时的样式 */
+.myCheckbox:checked + label::after {
+  content: "\2713"; /* Unicode字符表示已选中的图标（如FontAwesome）*/
+  font-family: FontAwesome; /* 引入相关字体库 */
+  color: red; /* 设置已选中时的文本颜色 */
+  position: absolute;
+  background-color: #EF6C2C;
+  color: #fff;
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  line-height: 24px;
+}
+.amount{
+	position: fixed;
+	bottom: 0px;
+	z-index: 999;
+	height: 53px;
+	width: 100%;
+	display: flex;
+}
+.amount .amountCont{
+	flex: 1;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+}
+.amount .comfirmBtn{
+	width: 140px;
+	height: 53px;
+	line-height: 53px;
+	text-align: center;
+	background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+	color: #fff;
+}
+.amount .amountCont .hasChosen{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #999999;
+}
+.amount .amountCont .amountPrice{
+	font-size: 18px;
+	font-family:Camphor Pro Bold;
+	font-weight: 500;
+	color: #FF0000;
+	text-transform: uppercase;
+}
+
+.shopCarList .shopCarItem{
+	display: flex;
+	align-items: center;
+	padding: 16px;
+	background-color: #fff;
+}
+.shopCarItem .proImg{
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	margin-left: 16px;
+}
+.shopCarItem .proImg img{
+	width: 100%;
+}
+.shopCarItem .proInfo{
+	flex: 1;
+	overflow: hidden;
+	margin-left: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.shopCarItem .proInfo .proTitle{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	white-space: nowrap;
+	height: 30px;
+}
+.props .propItem{
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #EFEFEF;
+	font-size: 14px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #999999;
+	border-radius: 6px 6px 6px 6px;
+	padding: 3px;
+}
+.props .propItem .iconfont{
+	height: 0;
+	font-size: 30px;
+}
+.proInfo .priceNum{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.proInfo .priceNum .marketPrice{
+	font-size: 16px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #FF0000;
+}
+/* 数字选择器 */
+.mui-numbox{
+	border: 0px;
+	background-color:transparent;
+	height: 24px;
+}
+.mui-numbox [class*=btn-numbox], .mui-numbox [class*=numbox-btn]{
+	width: 32px;
+	height: 24px;
+	background: #EFEFEF;
+	border-radius: 6px 6px 6px 6px;
+}
+.mui-numbox .mui-input-numbox, .mui-numbox .mui-numbox-input{
+	border: 0px!important;
+	height: 24px;
+	background: #EFEFEF;
+	border-radius: 6px 6px 6px 6px!important;
+	opacity: 1;
+	font-size: 14px;
+}
+
+.deleteIcon{
+	transform: translateX(-10px);
+}
+.deleteIcon .iconfont{
+	font-size: 20px;
+}
+.mui-numbox{
+	transition: all 0.2s;
+}
+.mui-numbox.transRight,.deleteIcon.transRight{
+	transform: translateX(180px);
+	opacity: 0;
+	width: 0;
+	visibility: visible;
+}
+.mui-bar .mui-btn-link.mui-quitguanli{
+	color: #E6403A;
+}
+.hide{
+	display: none;
+}
+
+.emptyCar{
+	margin: 110px auto;
+}
+.emptyCar .emptyList{
+	width: 276px;
+	margin: 0 auto;
+}
+.emptyCar .emptyList img{
+	width: 100%;
+}
+.emptyCarTxt{
+	margin-top: 35px;
+	text-align: center;
+	font-size: 16px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #000000;
+	color: #D8D8D8;
+}

@@ -1,0 +1,102 @@
+.content{
+	background-image: url(../../images/loginBg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.LoginCon{
+	background-color: #fff;
+	border-radius: 20px 20px 0 0;
+	top: 79px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 32px;
+}
+.formCon{
+	margin-top: 15px;
+}
+.formCon .formInput{
+	position: relative;
+}
+.formInput label{
+	font-size: 14px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #999999;
+}
+.formInput input{
+	margin-top: 12px;
+	background: #F7F7F7;
+	border-radius: 10px 10px 10px 10px;
+	border: 0px;
+	outline: 0px;
+	height: 52px;
+	padding: 0 22px;
+}
+.formInput .iconfont{
+	position: absolute;
+	right: 22px;
+	top: 50px;
+}
+.forgetPassword{
+	font-size: 14px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #999999;
+	text-align: right;
+}
+.LoginCon .btn{
+	height: 52px;
+	width: 100%;
+	border-radius: 5px 5px 5px 5px;
+	text-align: center;
+	line-height: 52px;
+}
+#login,#comfirm{
+	margin-top: 39px;
+	color: #fff;
+	background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+	text-transform: uppercase;
+}
+#createUser{
+	margin-top: 24px;
+	color: #333;
+	background-color: #EFEFEF;
+}
+.checkbox{
+	margin-top: 57px;
+}
+.checkbox .rulesTxt{
+	color: #586197;
+}
+
+#sendSms,#sendemailCode{
+	font-size: 14px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #EF6C2C;
+}
+.toggleLoginType{
+	display: flex;
+	gap: 12px;
+	margin-top: 36px;
+}
+.toggleLoginType .tabItem{
+	font-size: 16px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #CCCCCC;
+}
+.toggleLoginType .tabspe{
+	color: #CCCCCC;
+}
+.toggleLoginType .tabItem.active{
+	color: #000000;
+	font-family: Camphor Pro Bold;
+}
+.hide{
+	display: none;
+}

@@ -1,0 +1,360 @@
+
+#app{
+	position: relative;
+	padding-bottom: 100px;
+}
+.productMain{
+	background-color: #fff;
+	padding: 20px 0;
+}
+#slider{
+	width: 70%;
+	margin: 0 auto;
+}
+.topmenuICon{
+	width: 34px;
+	height: 34px;
+	background: #B7B7B7;
+	border-radius: 17px;
+	opacity: 1;
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top:20px;
+}
+.topmenuICon.menuIcon{
+	left: 3%;
+}
+.topmenuICon.shopIcon{
+	right: 3%;
+}
+
+.productInfo{
+	margin-top: 16px;
+}
+.productInfo .priceCon{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.productInfo .priceCon .price{
+	font-size: 28px;
+	color: #FF0000;
+	font-family: Camphor Pro Bold;
+	font-weight: 500;
+}
+.productInfo  .sellNum{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #999999;
+	line-height: 22px;
+}
+.productInfo .productTitle{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 12px;
+}
+.productInfo .productTitle .title{
+	font-size: 16px;
+	font-family: Camphor Pro Bold;
+	font-weight: 500;
+	color: #000000;
+	line-height: 22px;
+}
+.productInfo .productTitle .shareBtn{
+	display: flex;
+	background-image: url(../../images/shareBtn.png);
+	width: 83px;
+	height: 32px;
+	justify-content: space-around;
+	line-height: 32px;
+	background-repeat: no-repeat;
+}
+.productInfo .productTitle .shareBtn .shareTxt{
+	font-size: 10px;
+	font-family: Camphor Pro Bold;
+	text-transform: uppercase;
+	color: #fff;
+	transform: scale(0.9);
+}
+.productInfo .productTitle .shareBtn .sharePrice .currencyIcon{
+	font-size: 8px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #CB202B;
+	transform: scale(0.8);
+}
+.productInfo .productTitle .shareBtn .sharePrice .commission{
+	font-size: 14px;
+	font-family: Camphor Pro Bold;
+	font-weight: 400;
+	color: #CB202B;
+}
+.productInfo .productTitle .shareBtn .sharePrice .currency{
+	font-size: 5px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	color: #CB202B;
+	transform: scale(0.5);
+}
+
+.productMessage{
+	margin-top: 16px;
+}
+.messageLists{
+	background-color: #fff;
+	padding: 18px 16px;
+}
+.productMessage .messageItem{
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+.productMessage hr{
+	border-radius: 0px 0px 0px 0px;
+	opacity: 1;
+	border: 0px;
+	margin: 16px 0px;
+}
+.messageItem .shortIcon .iconfont{
+	font-size: 24px;
+}
+.messageItem .title{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	color: #000000;
+} 
+.messageItem .des{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	color: #999999;
+}
+
+.productDetail{
+	margin: 28px 0;
+}
+.productDetail .firstTitle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+.productDetail .firstTitle .line{
+	height: 1px;
+	width: 66px;
+	background-color: #000000;
+}
+
+.bottomCon{
+	background-color: #fff;
+	height: 85px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	display: flex;
+	align-items: center;
+	padding: 21px 16px;
+	gap: 14px;
+	z-index:3;
+}
+.bottomCon .shopCarBtn{
+	width: 86px;
+	height: 43px;
+	background: #EFEFEF;
+	border-radius: 10px 10px 10px 10px;
+	opacity: 1;
+	text-align: center;
+	line-height: 43px;
+	position: relative;
+}
+.bottomCon .shopCarBtn .mui-badge{
+	position: absolute;
+	top: 6px;
+	right: 23px;
+}
+.bottomCon .buyNow{
+	flex: 1;
+}
+.buyBtn{
+	height: 43px;
+	background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+	border-radius: 10px 10px 10px 10px;
+	opacity: 1;
+	text-align: center;
+	line-height: 43px;
+	color: #fff;
+}
+.clickBtn.buyNow{
+	background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+}
+
+.hide{
+	display: none;
+}
+/* 商品弹窗 */
+.closeIcon{
+	width: 27px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
+	background-color: #B7B7B7;
+	border-radius: 15px;
+	color: #fff;
+	position: absolute;
+	right: 16px;
+	z-index: 999;
+}
+.popBox{
+	position: fixed;
+	overflow: hidden;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	transition: all .3s;
+}
+.popBox.visible{
+	z-index: -1;
+}
+.popBox .boxshadow{
+	background-color: #000;
+	opacity: 0.3;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.popBox .proInformation{
+	display: flex;
+	gap: 16px;
+	padding: 16px;
+}
+.popBox .proInformation .productImg{
+	width: 84px;
+	height: 84px;
+	overflow: hidden;
+}
+.popBox .proInformation .productImg img{
+	width: 100%;
+}
+.popBox .proInformation .productPrice .price{
+	font-size: 20px;
+	color: #FF0000;
+}
+.popBox .proInformation .productPrice .chooseAttrs{
+	color: #999999;
+	margin-top: 10px;
+}
+.popBox .popContent{
+	height: 72vh;
+	background: #fff;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding: 16px;
+	transform: translateY(0vh);
+	transition: all .3s;
+}
+.popBox.visible .popContent{
+	transform: translateY(72vh);
+}
+.popBox.visible .boxshadow{
+	display: none;
+}
+.popBox .clickBtn{
+	width: calc(100% - 32px);
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	background: linear-gradient(270deg, #F09C3A 0%, #F1D046 100%);
+	border-radius: 10px 10px 10px 10px;
+	opacity: 1;
+	color: #fff;
+	position: absolute;
+	bottom: 16px;
+	z-index: 999;
+}
+.popBox .clickBtn#buyNow{
+	background: linear-gradient(270deg, #EC4927 0%, #E76F31 100%);
+}
+.popBox .clickBtn#disabledBtn{
+	background: #ccc;
+}
+.proAttr .title{
+	font-size: 14px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #000000;
+	line-height: 22px;
+	-webkit-background-clip: text;
+}
+.popBox .mui-scroll-wrapper{
+	height: 60vh;
+}
+.popBox .mui-scroll-wrapper .proAttr{
+	padding: 16px;
+}
+.texAttr .attrCon{
+	margin-top: 16px;
+}
+.texAttr ul,.imgAttr ul{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px;
+	margin: 0px;
+	gap:8px;
+}
+.texAttr ul li{
+	background: #EFEFEF;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 32px;
+	opacity: 1;
+	background-color: #EFEFEF;
+	min-width: 60px;
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.texAttr ul li.active,.imgAttr ul li.active{
+	border: 2px solid #EF6C2C;
+}
+.imgAttr ul li{
+	width: calc(33% - 8px);
+	background-color: #F7F7F7;
+	padding: 5px;
+	display: block;
+	box-sizing: border-box;
+}
+.imgAttr ul li img{
+	width: 100%;
+}
+.imgAttr ul li .attrName{
+	font-size: 13px;
+	font-family: PingFang HK, PingFang HK;
+	font-weight: 400;
+	color: #000000;
+	line-height: 22px;
+}
+.imgAttr .attrCon{
+	margin-top: 16px;
+}
+.proAttr .mui-numbox{
+	margin-top: 16px;
+}
+.popBox hr{
+	border: 0px;
+	width: calc(100% - 32px);
+	padding: 0px;
+	margin: 0px;
+}
+
+.productDetailContent{
+	padding:0 16px;
+	margin-top: 34px;
+}
+.attrCon .hide{
+	display: none;
+}

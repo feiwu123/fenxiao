@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>列表页</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/xiaomi/productList.css" />
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					
+			<div id="app">
+				<div class="top-content">
+					<div class="header">
+						<div class="header_con">
+							<div class="icons menu_icon" id="offCanvasShow">
+								<span class="iconfont icon-menu-line"></span>
+							</div>
+							<div class="search-content">
+								<input class="search-input" type="text" required id="searchInput"/>
+								<label class="mui-placeholder" for="searchInput">
+									<span class="iconfont icon-search-line"></span>
+									<span class="iconText">búsqueda</span>
+								</label>
+							</div>
+							<div class="icons shopping-car">
+								<span class="iconfont icon-shopping-cart-line"></span>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="body-content">
+					<div class="filterCon">
+						<div class="row filterKeywords">
+							<div class="title">Store</div>
+							<a class="fiterWords" data-open='0' >Inventario<span class="iconfont icon-arrow-drop-down-fill"></span></a>
+						</div>
+					</div>
+					<div class="dropDownList">
+						<div class="popBoxshadow">
+						</div>
+						<div id="popover" class="filterList">
+						  <ul class="mui-table-view">
+							<li class="mui-table-view-cell active default"><a href="#"><span>Inventario</span><span class="iconfont icon-check-fill"></span></a></li>
+							<li class="mui-table-view-cell default"><a href="#"><span>Nuevos productos</span><span class="iconfont icon-check-fill"></span></a></li>
+							<li class="mui-table-view-cell default"><a href="#"><span>Número de comentario</span><span class="iconfont icon-check-fill"></span></a></li>
+							<li class="mui-table-view-cell default"><a href="#"><span>Número de comentario</span><span class="iconfont icon-check-fill"></span></a></li>
+							<li class="mui-table-view-cell default"><a href="#"><span>Número de comentario</span><span class="iconfont icon-check-fill"></span></a></li>
+						  </ul>
+						</div>
+					</div>
+					<!-- 下拉推荐产品 -->
+					<div style="background-color: #fff;">
+						<div class="row" id="productListContent">
+							<div class="productList">
+								<div class="productItem">
+									<div class="productImg">
+										<img src="./images/login-1.png"/>
+									</div>
+									<div class="productName">
+										Redmi Note 12 4GB RAM 128GB ROM Onyx Gray
+									</div>
+									<div class="cutoff">
+										Alta comisión:15%
+									</div>
+									<div class="productPrice">
+										$2899.00MXN
+									</div>
+									<div class="coins">
+										<img class="coinImg" src="./images/coin.png" />
+										<span class="ganar">ganar </span>
+										<span class="yongjin">$300MXN</span>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>	
+					
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- off-canvas backdrop -->
+			<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>		
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script type="text/javascript" charset="UTF-8">
+   mui.init({
+	   pullRefresh : {
+	       container:'#offCanvasContentScroll',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+	       up : {
+	         height:50,//可选.默认50.触发上拉加载拖动距离
+	         auto:false,//可选,默认false.自动上拉加载一次
+	         contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+	         contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+	         callback:getAjax //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+	       }
+	     }
+   });
+   mui.plusReady(function(){
+    
+   });
+   mui.ready(function(){
+    
+    });
+   
+   function getAjax(){
+	   mui.ajax('http://server-name/login.php',{
+	   	data:{
+	   		username:'username',
+	   		password:'password'
+	   	},
+	   	dataType:'json',//服务器返回json格式数据
+	   	type:'post',//HTTP请求类型
+	   	timeout:10000,//超时时间设置为10秒；
+	   	headers:{'Content-Type':'application/json'},	              
+	   	success:function(data){
+	   		//服务器返回响应，根据响应结果，分析是否登录成功；
+			
+			//this.endPullupToRefresh(true|false);必须要结束数据
+	   	},
+	   	error:function(xhr,type,errorThrown){
+	   		//异常处理；
+	   		console.log(type);
+	   	}
+	   });
+   }
+   
+	mui('.filterCon').on('tap', '.fiterWords', function(){
+	  console.log(this.dataset.open);
+	  var isOpen = parseInt(this.dataset.open);
+	  if(isOpen){
+		  this.dataset.open = 0;
+		  document.querySelector('.dropDownList').className = "dropDownList";
+	  }else{
+		  this.dataset.open = 1;
+		  document.querySelector('.dropDownList').className = "dropDownList open";
+	  }
+	});
+	
+	mui('.dropDownList').on('tap', '.popBoxshadow', function(){
+		document.querySelector('.dropDownList').className = "dropDownList";
+		document.querySelector('.filterCon .fiterWords').dataset.open = 0;
+	}
+	)
+  </script>
