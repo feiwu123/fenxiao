@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/mui.picker.min.css">
+		<link rel="stylesheet" href="../css/index.css" />
+		
+		<link rel="stylesheet" href="css/product.css" />
+		<link rel="stylesheet" href="../css/xiaomi/order.css" />
+		<link rel="stylesheet" href="../fonts/font/iconfont.css"/>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<div class="searchTopCon">
+						<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line black"></a>
+						<div class="searchCon filterNav">
+							<div class="searchOrder">
+								<span class="iconfont icon-search-line"></span>
+								<input class="searchInput" type="search" placeholder="búsqueda" />
+							</div>
+						</div>
+					</div>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper" style="padding-top: 44px;">
+					<div class="mui-scroll">
+					<!-- 内容 -->
+					<div class="scrollContent">
+						<div class="orderList">
+							<div class="orderItem">
+								<div class="orderInfo">
+									<div class="ordeNum">
+										<span class="num">2023110220330571722</span><span class="iconfont icon-file-copy-line"></span>
+									</div>
+									<div class="orderTime">2024-03-21  12:52</div>
+								</div>
+								<div class="orderProductList">
+									<div class="productItem">
+										<div class="productImg">
+											<img src="images/logo.png" />
+										</div>
+										<div class="productInfo">
+											<div>
+												<div class="productName">Redmi Note 12 4GB RAM 128GB ROM Onyx Gray</div>
+												<div class="productProps">128GB;Black</div>
+											</div>
+												<div class="perPrice">$999.00</div>
+										</div>
+										<div class="productNumber">
+											×<span class="pnum">1</span>
+										</div>
+									</div>
+								</div>
+								<div class="orderStatus">
+									<div class="invalid orderItem">
+										INVALID
+									</div>
+									<div class="unpaid orderItem">
+										UNPAID
+									</div>
+									<div class="unshipped orderItem">
+										UNSHIPPED
+									</div>
+								</div>
+								<div class="amount">
+									<div class="amountNumCon">
+										<span>TOTAL:</span><span class="amountNum">10</span>Pieza
+									</div>
+									<div class="ammountPriceCon">
+										<span>PRECIO TOTAL:</span><span class="amountPrice">$3999.00</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				
+				<div class="pagenation">
+					<div class="pageSize" id="pickPage">
+						<span class="pageNumber">第1页</span><span class="iconfont icon-arrow-drop-down-fill"></span>
+					</div>
+					<div class="rotatepageNum">
+						跳至<span><input  class="pageValue"/></span>页
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+	
+	</body>
+</html>
+<script src="../js/mui.min.js"></script>
+<script src="../js/mui.picker.min.js"></script>
+<script src="../js/mui.poppicker.js"></script>
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/fxxt/offcanvas.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+	 
+	 var pickerPageSize = new mui.PopPicker({
+	     layer: 1
+	 });
+	 pickerPageSize.setData([{
+	         value: 1,
+	         text: '第1页'
+	     }, {
+	         value:2,
+	         text: '第2页'
+	     },{
+	         value:3,
+	         text: '第3页'
+	     },
+	 		 {
+	 		     value:4,
+	 		     text: '第4页'
+	 		 }])
+	 
+	 $("#pickPage").on("tap",()=>{
+	 		pickerPageSize.show(function(SelectedItem) {
+	 		console.log(SelectedItem);
+	 		$("#pickPage").find(".pageNumber").html(SelectedItem[0].text);;
+	 	})
+	 })
+</script>
