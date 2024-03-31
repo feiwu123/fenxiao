@@ -123,9 +123,12 @@
 	height: 70vh;
 }
 #cardList .cardList{
-	padding: 0px 24px;
+	background-color: #F6F6F6;
 }
 .cardList .listItem{
+	margin-bottom: 8px;
+}
+.cardList .listItem .popCardInfo{
 	font-size: 14px;
 	font-family: Camphor Pro;
 	font-weight: 400;
@@ -133,13 +136,77 @@
 	color: #000000;
 	display: flex;
 	justify-content: space-between;
-	padding: 16px 0;
-	border-top:1px solid #EFEFEF ;
+	padding: 16px 24px;
+	background-color: #fff;
+	border-bottom:1px solid #EFEFEF ;
+}
+.popListItemBottom{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	line-height: 52px;
+	padding: 0 24px;
+	background-color: #fff;
+}
+.popListItemBottom .selectRadio .selectIcon{
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+	background-color: #F6F6F6;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cardList .listItem  .popListItemBottom .selectRadio .icon-check-fill{
+	display: none;
+}
+.cardList .listItem  .popListItemBottom .selectRadio.selected .icon-check-fill{
+	display: block;
+	color: #fff;
+}
+.popListItemBottom .selectRadio .selectedTxt{
+	display: none;
+}
+.popListItemBottom .selectRadio .noselect{
+	display: block;
+	color: #999;
+}
+.popListItemBottom .selectRadio.selected .selectedTxt{
+	display: block;
+	color: #EF6C2C;
+}
+.popListItemBottom .selectRadio.selected .noselect{
+	display: none;
+}
+.popListItemBottom .selectRadio.selected .selectIcon{
+	background-color: #EF6C2C;
+}
+.popListItemBottom .selectRadio.selected .icon-check-fill{
+	position: absolute;
+}
+.popListItemBottom .editGroups{
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+.popListItemBottom .selectRadio{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.popListItemBottom .editGroups>div{
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	color: #999999;
+}
+.listItem .popListItemBottom .editGroups .iconfont{
+	color: #999999;
 }
 .cardList .listItem .iconfont{
 	display: block;
 	color: #EF6C2C;
-	visibility: hidden;
 	font-size: 20px;
 }
 .cardList .listItem.active .iconfont{
@@ -148,6 +215,16 @@
 }
 .addNewCard{
 	bottom: 0;
+	font-size: 14px;
+	font-family: Camphor Pro;
+	font-weight: 400;
+	line-height: 22px;
+	color: #000000;
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 24px;
+	background-color: #fff;
+	border-bottom:1px solid #EFEFEF ;
 }
 .cardList .listItem.addNewCard .iconfont{
 	visibility: initial;

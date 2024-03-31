@@ -98,11 +98,39 @@
 						<div class="mui-scroll">
 							<!-- 弹窗内容 -->
 							<div class="cardList">
-								<div class="listItem active"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
-								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
-								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
-								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
-								<div class="listItem"><span class="cardName">银行名称银行名称   (9281)</span><span class="iconfont icon-check-fill"></span></div>
+								<div class="listItem">
+									<div class="popCardInfo">	
+										<span class="cardName">银行名称银行名称   (922281)</span><span></span>
+									</div>
+									<div class="popListItemBottom">
+										<div class="selectRadio selected">
+											<div class="selectIcon"><span class="iconfont icon-check-fill"></span></div>
+											<span class="selectedTxt">已选中</span>
+											<span class="noselect">未选中</span>
+										</div>
+										<div class="editGroups">
+											<div class="eidtBtn"><span class="iconfont icon-edit-line"></span><span>修改</span></div>
+											<div class="deleteBtn"><span class="iconfont icon-delete-bin-line"></span><span>删除</span></div>
+										</div>
+									</div>
+								</div>
+								<div class="listItem">
+									<div class="popCardInfo">	
+										<span class="cardName">银行名称银行名称   (921181)</span><span></span>
+									</div>
+									<div class="popListItemBottom">
+										<div class="selectRadio">
+											<div class="selectIcon"><span class="iconfont icon-check-fill"></span></div>
+											<span class="selectedTxt">已选中</span>
+											<span class="noselect">未选中</span>
+										</div>
+										<div class="editGroups">
+											<div class="eidtBtn"><span class="iconfont icon-edit-line"></span><span>修改</span></div>
+											<div class="deleteBtn"><span class="iconfont icon-delete-bin-line"></span><span>删除</span></div>
+										</div>
+									</div>
+								</div>
+								
 								<div class="addNewCard listItem">
 									<div class="title">
 										<span class="iconfont icon-bank-card-line"></span><span>使用新银行卡提现</span>
@@ -147,16 +175,16 @@
 	 });
 	 
 	 //关闭规格弹窗
-	document.querySelector('.popBox .closeIcon').onclick = function(){
+	$('.popBox .closeIcon').on("tap",function(){
 		   document.getElementsByTagName('html')[0].className = "";
 		   document.getElementById('cardList').className = "popBox visible";
-	}
-	$('.popBoxContent .listItem').not(".addNewCard").on("tap",function(){
-			 $(".popBoxContent .listItem").removeClass("active");
-			 $(this).addClass("active");
+	})
+	$('.popBoxContent .listItem .selectRadio').on("tap",function(){
+			 $(".popBoxContent .listItem .selectRadio").removeClass("selected");
+			 $(this).addClass("selected");
 			 document.getElementsByTagName('html')[0].className = "";
 			 document.getElementById('cardList').className = "popBox visible";
-			 var cardInfo = $(this).find(".cardName").html();
+			 var cardInfo = $(this).parents(".listItem").find(".cardName").html();
 			 $(".cardInfo .cardName").text(cardInfo);
 	})
 	
@@ -166,10 +194,19 @@
 			 var index = $(".popBoxContent .listItem.active").index();
 			 mui('.popBoxContent').scroll().scrollTo(0,-77*index,100);
 	})
+	//修改银行卡
+	$('.eidtBtn').on("tap",function(){
+		mui.openWindow({
+		  url: "addCard.html"
+		});
+	})
+	$('.deleteBtn').on("tap",function(){
+		 $(this).parents(".listItem").remove();
+	})
 	
-	document.querySelector('.addNewCard').onclick = function(){
-			 mui.openWindow({
-			   url: "addCard.html"
-			 });
-	}
+	$('.addNewCard').on("tap",function(){
+		mui.openWindow({
+		  url: "addCard.html"
+		});
+	})
 </script>
