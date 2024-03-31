@@ -160,11 +160,17 @@
 	 		     value:4,
 	 		     text: '第4页'
 	 		 }])
-	 
+	 pickerPageSize.pickers[0].setSelectedValue(3);
 	 $("#pickPage").on("tap",()=>{
 	 		pickerPageSize.show(function(SelectedItem) {
 	 		console.log(SelectedItem);
 	 		$("#pickPage").find(".pageNumber").html(SelectedItem[0].text);;
 	 	})
 	 })
+	 $(this).siblings(".stockNum").find(".stockValue").val();
+	 
+	 // var brandList = [];
+	 // brand_list.forEach((item)=>{
+		//  brandList.push({value:item,brand_id,text:item.brand_name})
+	 // })
 </script>

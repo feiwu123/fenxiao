@@ -36,6 +36,7 @@ input[type=search]{
 }
 .mui-bar-nav~.mui-content{
 	padding-top: 95px;
+	padding-bottom: 52px;
 }
 .filterTab .iconfont{
 	font-size: 25px;
@@ -46,10 +47,12 @@ input[type=search]{
 }
 .orderList .orderItem{
 	border-radius: 6px 6px 6px 6px;
+	margin-bottom: 10px;
 }
 .orderProductList .productItem .productInfo{
 	margin-left: 0;
 	margin-right: 0;
+	height: 86px;
 }
 .stockInfo{
 	display: flex;

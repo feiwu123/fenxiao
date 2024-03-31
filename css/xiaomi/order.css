@@ -88,7 +88,7 @@ span.mui-icon {
 .orderList .orderItem{
 	background-color: #fff;
 	padding: 16px;
-	
+	margin-bottom: 10px;
 }
 .orderList .orderItem .orderInfo{
 	display: flex;
@@ -114,6 +114,8 @@ span.mui-icon {
 .orderProductList .productItem{
 	padding: 16px 0 12px 2px;
 	display: flex;
+	gap: 10px;
+	align-items: center;
 }
 .orderProductList .productItem .productImg{
 	width: 89px;

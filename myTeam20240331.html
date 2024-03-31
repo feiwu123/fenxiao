@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<link rel="stylesheet" href="css/xiaomi/commission.css" />
+		
+		<link rel="stylesheet" href="fonts/font/iconfont.css"/>
+		<style>
+			.teamContent{
+				display: flex;
+				height: 100px;
+				width: 100%;
+				background: linear-gradient(180deg, #DB654D 0%, #D24533 100%);
+				border-radius: 12px;
+				align-items: center;
+				padding: 0 24px;
+				gap: 12px;
+				position: relative;
+			}
+			.teamContent:after{
+				content: "";
+				position: absolute;
+				border-top: 10px solid #D24533; 
+				border-right: 20px solid transparent;
+				border-left: 20px solid transparent;
+				border-bottom: 10px solid transparent;
+				bottom: -19px;
+				left: calc(50% - 20px);
+			}
+			.teamContent .avatarImg{
+				width: 60px;
+				height: 60px;
+				border-radius: 30px;
+				overflow: hidden;
+			}
+			.teamContent .avatarImg img{
+				width: 100%;
+			}
+			.teamDetail .teamCon{
+				display: flex;
+				align-items: center;
+			}
+			.teamDetail .teamCon .teamName{
+				font-size: 16px;
+				font-family: PingFang HK, PingFang HK;
+				font-weight: 600;
+				color: #fff;
+			}
+			.teamDetail .teamCon .teamLevel{
+				width: 63px;
+				margin-left: 8px;
+			}
+			.teamDetail .teamCon .teamLevel img{
+				width: 100%;
+			}
+			.teamDetail .amount{
+				color: rgba(255,255,255,0.6);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!--侧滑菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left mui-transitioning">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="content">
+							<div class="closeMenu" id="offCanvasHide"><span class="iconfont icon-menu-line"></span></div>
+							<div class="userInfo">
+								<div class="avator">
+									<div class="avatorImg">
+										<img src=""/>
+									</div>
+									<div class="userName">123</div>
+								</div>
+								<div class="userMenuList">
+									<ul>
+										<li class="menuItem"><span class="iconfont icon-exchange-cny-fill"></span><span>我的佣金</span></li>
+										<li class="menuItem"><span class="iconfont icon-bill-line"></span><span>我的订单</span></li>
+										<li class="menuItem"><span class="iconfont icon-file-user-line"></span><span>我的团队</span></li>
+										<li class="menuItem"><span class="iconfont icon-trophy-line"></span><span>我的等级</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logout">
+						<span class="iconfont icon-logout-box-r-line"></span>退出登陆
+					</div>
+				</div>
+			</aside>
+			<!--主界面部分-->
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a id="offCanvasShow" class="mui-pull-left iconfont icon-menu-line black"></a>
+					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">返回首页</a>
+					<h1 class="mui-title">我的团队</h1>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+					<!-- 内容 -->
+						<div class="class="commissionContent"">
+							<div class="commissionList">
+								<div class="teamContent">
+									<div class="avatarImg">
+										<img src="images/logo.png" />
+									</div>
+									<div class="teamDetail">
+										<div class="teamCon">
+											<div class="teamName">Theresa Webb</div>
+											<div class="teamLevel">
+												<img src="images/team/level1.png"/>
+											</div>
+										</div>
+										<div class="amount">
+											收入:<span class="income">$999.00MXN</span>
+										</div>
+									</div>
+								</div>
+								<div class="list" style="margin-top: 24px;">
+									<!-- 团队收益 -->
+									<div class="listItem">
+										<div class="listTopCon">
+											<div class="topCon">
+												<div class="userInfo">
+													<div class="avatarImg">
+														<img src="./images/icon/income.svg" />
+													</div>
+													<div class="personIncome">
+														个人收益
+													</div>
+												</div>
+												<div class="dateTime">2022-10-21 10:22:21</div>
+											</div>
+											<div class="buyProducts incomeDetail">
+												Número de orden.2024032723598291333；
+												dividido en: dinero 17 asfasgasgasgasgasgasgas
+											</div>
+											<div class="productList">
+											</div>	
+										</div>
+										<div class="listBottomCon">
+											<div class="incomePrice">
+												$99.00MXN
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/fxxt/offcanvas.js"></script>
+<script>
+	mui.init({
+		
+	});
+	mui.plusReady(function(){
+	 
+	});
+	mui.ready(function(){
+	 
+	 });
+</script>

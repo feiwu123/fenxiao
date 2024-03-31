@@ -57,10 +57,10 @@
 					</div>
 					<div class="filterTabs">
 						<div class="filterTab" id="brandSelect">
-							<span>Xiaomi Store</span><span class="iconfont icon-arrow-drop-down-fill"></span>
+							<span class="brandName">Xiaomi Store</span><span class="iconfont icon-arrow-drop-down-fill"></span>
 						</div>
 						<div class="filterTab" id="categorySelect">
-							<span>Smart devices</span><span class="iconfont icon-arrow-drop-down-fill"></span>
+							<span class="categoryName">Smart devices</span><span class="iconfont icon-arrow-drop-down-fill"></span>
 						</div>
 					</div>
 				</header>
@@ -193,6 +193,7 @@
 	 		pickerBrand.show(function(SelectedItem) {
 	 			console.log(SelectedItem);
 				selectedBrnad = SelectedItem;
+				$("#brandSelect span").first().html(SelectedItem[0].text);
 	 		})
 	 })
 	 $("#categorySelect").on("tap",()=>{
