@@ -133,17 +133,23 @@
 													<div class="avatarImg">
 														<img src="./images/icon/income.svg" />
 													</div>
-													<div class="personIncome">
-														个人收益
+													<div class="">
+														<div class="personIncome">
+															个人收益
+														</div>
+														<div class="dateTime">2022-10-21 10:22:21</div>
 													</div>
 												</div>
-												<div class="dateTime">2022-10-21 10:22:21</div>
+												<div class="incomeState">
+													已完成
+												</div>
 											</div>
 											<div class="buyProducts incomeDetail">
 												Número de orden.2024032723598291333；
 												dividido en: dinero 17 asfasgasgasgasgasgasgas
 											</div>
-											<div class="productList">
+											<div class="moreDetail">
+												显示更多
 											</div>	
 										</div>
 										<div class="listBottomCon">
@@ -177,4 +183,19 @@
 	mui.ready(function(){
 	 
 	 });
+	 
+	 //是否显示更多
+	 function compuHeight(){
+	 	$(".listItem .incomeDetail").each((index,item)=>{
+	 		if($(item).height()>45){
+	 			$(item).addClass("expand");
+	 			$(item).siblings(".moreDetail").removeClass("hide");
+	 		}
+	 	})
+	 };
+	 $(".listItem .moreDetail").on("tap",function(){
+	 	$(this).siblings(".incomeDetail").removeClass("expand");
+	 	$(this).addClass("hide");
+	 })
+	 compuHeight(); 
 </script>
